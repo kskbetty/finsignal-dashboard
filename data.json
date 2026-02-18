@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "18.02.2026 09:51:00",
+  "lastUpdate": "18.02.2026 09:56:03",
   "date": "18 Şubat 2026",
   "marketSentiment": "NEUTRAL",
   "sentimentScore": 50,
@@ -8,20 +8,20 @@
   "topRisk": "",
   "prices": {
     "btc": {
-      "price": 68199,
-      "change24h": 0.20930320872045177
+      "price": 68141,
+      "change24h": 0.05907813206461848
     },
     "eth": {
-      "price": 2019.77,
-      "change24h": 2.350014683972257
+      "price": 2016.96,
+      "change24h": 2.2076080971900747
     },
     "sol": {
-      "price": 85.51,
-      "change24h": -0.29894136650691017
+      "price": 85.42,
+      "change24h": -0.5554008960737923
     },
     "xrp": {
       "price": 1.49,
-      "change24h": 2.2576343074819496
+      "change24h": 2.0683814064595603
     }
   },
   "trendingCoins": [
