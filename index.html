@@ -882,5 +882,47 @@ fetch('data.json?t=' + Date.now())
   })
   .catch(e => console.log('Veri yüklenemedi:', e));
 </script>
+
+  <script>
+fetch('./data.json?t=' + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    if (!data.signals || data.signals.length === 0) return;
+    
+    document.getElementById('signalsFeed').innerHTML = data.signals.map(s => {
+      const typeClass = s.type === 'BULL' ? 'tag-bull' : s.type === 'BEAR' ? 'tag-bear' : 'tag-neu';
+      const typeLabel = s.type === 'BULL' ? '▲ BULLISH' : s.type === 'BEAR' ? '▼ BEARISH' : '● NEUTRAL';
+      const confClass = s.confidence === 'High' ? 'conf-high' : s.confidence === 'Med' ? 'conf-mid' : 'conf-low';
+      return `<div class="signal-item">
+        <div class="signal-top"><span class="signal-expert">${s.expert}</span><span class="signal-time">${s.time}</span></div>
+        <div class="signal-bottom">
+          <span class="signal-asset">${s.asset}</span>
+          <span class="signal-tag ${typeClass}">${typeLabel}</span>
+          <span style="font-size:10px;color:var(--muted);font-family:var(--font-mono)">
+            <span class="confidence-dot ${confClass}"></span>${s.confidence}
+          </span>
+        </div>
+        <div class="signal-text">${s.text}</div>
+      </div>`;
+    }).join('');
+
+    document.getElementById('currentDate').textContent = data.date || '';
+    document.querySelector('.last-update').innerHTML = '<span class="dot"></span>Son güncelleme: ' + data.lastUpdate;
+    
+    const btc = data.prices?.btc;
+    const eth = data.prices?.eth;
+    const sol = data.prices?.sol;
+    const xrp = data.prices?.xrp;
+    
+    document.getElementById('ticker').innerHTML = [
+      { sym:'BTC', price:'$'+btc.price.toLocaleString(), chg:(btc.change24h>=0?'+':'')+btc.change24h.toFixed(2)+'%', pos:btc.change24h>=0 },
+      { sym:'ETH', price:'$'+eth.price.toLocaleString(), chg:(eth.change24h>=0?'+':'')+eth.change24h.toFixed(2)+'%', pos:eth.change24h>=0 },
+      { sym:'SOL', price:'$'+sol.price.toLocaleString(), chg:(sol.change24h>=0?'+':'')+sol.change24h.toFixed(2)+'%', pos:sol.change24h>=0 },
+      { sym:'XRP', price:'$'+xrp.price.toLocaleString(), chg:(xrp.change24h>=0?'+':'')+xrp.change24h.toFixed(2)+'%', pos:xrp.change24h>=0 },
+    ].map(t => `<span class="ticker-item"><span class="ticker-symbol">${t.sym}</span><span class="ticker-price">${t.price}</span><span class="ticker-chg ${t.pos?'pos':'neg'}">${t.chg}</span></span>`).join('');
+
+  })
+  .catch(e => console.error('Veri yüklenemedi:', e));
+</script>
 </body>
 </html>
