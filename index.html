@@ -854,5 +854,33 @@ function filterMarket(cat) {
   document.getElementById('signalCount').textContent = sigFiltered.length + ' sinyal';
 }
 </script>
+  <script>
+fetch('data.json?t=' + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    if (!data.signals) return;
+    // Sinyalleri güncelle
+    document.getElementById('signalsFeed').innerHTML = data.signals.map((s, i) => {
+      const typeClass = s.type === 'BULL' ? 'tag-bull' : s.type === 'BEAR' ? 'tag-bear' : 'tag-neu';
+      const typeLabel = s.type === 'BULL' ? '▲ BULLISH' : s.type === 'BEAR' ? '▼ BEARISH' : '● NEUTRAL';
+      const confClass = s.confidence === 'High' ? 'conf-high' : s.confidence === 'Med' ? 'conf-mid' : 'conf-low';
+      return `<div class="signal-item">
+        <div class="signal-top"><span class="signal-expert">${s.expert}</span><span class="signal-time">${s.time}</span></div>
+        <div class="signal-bottom">
+          <span class="signal-asset">${s.asset}</span>
+          <span class="signal-tag ${typeClass}">${typeLabel}</span>
+          <span style="font-size:10px;color:var(--muted);font-family:var(--font-mono)"><span class="confidence-dot ${confClass}"></span>${s.confidence}</span>
+        </div>
+        <div class="signal-text">${s.text}</div>
+      </div>`;
+    }).join('');
+    // Fiyatları güncelle
+    document.getElementById('currentDate').textContent = data.date;
+    document.querySelector('.last-update').innerHTML = '<span class="dot"></span>Son güncelleme: ' + data.lastUpdate;
+    // Sentiment
+    const sentColor = data.marketSentiment === 'BULLISH' ? 'var(--green)' : data.marketSentiment === 'BEARISH' ? 'var(--red)' : 'var(--yellow)';
+  })
+  .catch(e => console.log('Veri yüklenemedi:', e));
+</script>
 </body>
 </html>
