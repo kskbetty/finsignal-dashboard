@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "18.02.2026 10:05:00",
+  "lastUpdate": "18.02.2026 11:40:18",
   "date": "18 Şubat 2026",
   "marketSentiment": "BULLISH",
   "sentimentScore": 72,
@@ -8,28 +8,28 @@
   "topRisk": "Küresel likidite belirsizliği.",
   "prices": {
     "btc": {
-      "price": 68078,
-      "change24h": -0.028556021824262062
+      "price": 67490,
+      "change24h": -0.3979010433110013
     },
     "eth": {
-      "price": 2013.4,
-      "change24h": 1.9138148701390718
+      "price": 1983.36,
+      "change24h": 0.7567237177743208
     },
     "sol": {
-      "price": 85.27,
-      "change24h": -0.7493520006429002
+      "price": 83.54,
+      "change24h": -1.6719989160553044
     },
     "xrp": {
-      "price": 1.49,
-      "change24h": 1.811102614438688
+      "price": 1.47,
+      "change24h": 0.9630843383330345
     }
   },
   "trendingCoins": [
+    "World Liberty Financial",
+    "River",
     "Bitcoin",
-    "LayerZero",
     "Pudgy Penguins",
-    "Bittensor",
-    "Solana"
+    "Orca"
   ],
   "signals": [
     {
@@ -39,7 +39,7 @@
       "type": "BULL",
       "confidence": "High",
       "text": "On-chain metrikler güçlü",
-      "time": "10:05"
+      "time": "11:40"
     },
     {
       "id": 1,
@@ -48,7 +48,7 @@
       "type": "BULL",
       "confidence": "Med",
       "text": "Likidite koşulları olumlu",
-      "time": "10:05"
+      "time": "11:40"
     },
     {
       "id": 2,
@@ -57,7 +57,7 @@
       "type": "BULL",
       "confidence": "High",
       "text": "Model hedefi işaret ediyor",
-      "time": "10:05"
+      "time": "11:40"
     },
     {
       "id": 3,
@@ -66,7 +66,7 @@
       "type": "NEU",
       "confidence": "Low",
       "text": "Bekleme modunda",
-      "time": "10:05"
+      "time": "11:40"
     },
     {
       "id": 4,
@@ -75,7 +75,7 @@
       "type": "BULL",
       "confidence": "Med",
       "text": "Makro uyumlu",
-      "time": "10:05"
+      "time": "11:40"
     }
   ]
 }
