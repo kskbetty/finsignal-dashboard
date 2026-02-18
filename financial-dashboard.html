@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinSignal — Uzman Sinyal Takip</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080b10;
+    --surface: #0d1117;
+    --surface2: #141b24;
+    --border: #1e2a38;
+    --accent: #00e5ff;
+    --accent2: #ff6b35;
+    --green: #00ff88;
+    --red: #ff3d5a;
+    --yellow: #ffd93d;
+    --text: #e8f0fe;
+    --muted: #4a6080;
+    --font-head: 'Syne', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-head);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Background grid */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+  /* HEADER */
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo-icon {
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, var(--accent), #0066ff);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+
+  .logo h1 {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--text);
+  }
+
+  .logo span {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    display: block;
+    margin-top: 1px;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .last-update {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+
+  .last-update .dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+    margin-right: 6px;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .date-badge {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* STAT CARDS ROW */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    padding: 24px 0 0;
+  }
+
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+  }
+
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+  }
+
+  .stat-card.blue::before { background: linear-gradient(90deg, var(--accent), transparent); }
+  .stat-card.orange::before { background: linear-gradient(90deg, var(--accent2), transparent); }
+  .stat-card.green::before { background: linear-gradient(90deg, var(--green), transparent); }
+  .stat-card.red::before { background: linear-gradient(90deg, var(--red), transparent); }
+  .stat-card.yellow::before { background: linear-gradient(90deg, var(--yellow), transparent); }
+
+  @keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(10px); }
+  }
+
+  .stat-card:nth-child(1) { animation-delay: 0.1s; }
+  .stat-card:nth-child(2) { animation-delay: 0.15s; }
+  .stat-card:nth-child(3) { animation-delay: 0.2s; }
+  .stat-card:nth-child(4) { animation-delay: 0.25s; }
+  .stat-card:nth-child(5) { animation-delay: 0.3s; }
+
+  .stat-label {
+    font-size: 10px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--font-mono);
+    margin-bottom: 8px;
+  }
+
+  .stat-value {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-sub {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: var(--font-mono);
+  }
+
+  /* MAIN GRID */
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 16px;
+    padding: 20px 0;
+  }
+
+  @media (max-width: 900px) {
+    .main-grid { grid-template-columns: 1fr; }
+  }
+
+  /* SECTION */
+  .section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .section-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text);
+  }
+
+  .section-badge {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: var(--muted);
+  }
+
+  /* LEADERBOARD TABLE */
+  .leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .leaderboard-table th {
+    padding: 10px 16px;
+    text-align: left;
+    font-size: 10px;
+    font-family: var(--font-mono);
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  .leaderboard-table th:not(:first-child) { text-align: center; }
+
+  .leaderboard-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(30,42,56,0.5);
+    font-size: 13px;
+    transition: background 0.15s;
+  }
+
+  .leaderboard-table td:not(:first-child) {
+    text-align: center;
+    font-family: var(--font-mono);
+  }
+
+  .leaderboard-table tr:hover td { background: rgba(0,229,255,0.03); }
+  .leaderboard-table tr:last-child td { border-bottom: none; }
+
+  .rank {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    width: 28px;
+    display: inline-block;
+  }
+
+  .rank-1 { color: #ffd700; }
+  .rank-2 { color: #c0c0c0; }
+  .rank-3 { color: #cd7f32; }
+
+  .expert-info { display: flex; align-items: center; gap: 10px; }
+
+  .expert-avatar {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .expert-name { font-weight: 600; font-size: 13px; }
+  .expert-category { font-size: 10px; color: var(--muted); font-family: var(--font-mono); }
+
+  .accuracy-bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .accuracy-bar {
+    width: 60px;
+    height: 4px;
+    background: var(--surface2);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .accuracy-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 1s ease;
+  }
+
+  .pos { color: var(--green); }
+  .neg { color: var(--red); }
+  .neu { color: var(--yellow); }
+
+  .signal-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .tag-bull { background: rgba(0,255,136,0.1); color: var(--green); border: 1px solid rgba(0,255,136,0.2); }
+  .tag-bear { background: rgba(255,61,90,0.1); color: var(--red); border: 1px solid rgba(255,61,90,0.2); }
+  .tag-neu { background: rgba(255,217,61,0.1); color: var(--yellow); border: 1px solid rgba(255,217,61,0.2); }
+
+  /* SCORE BADGE */
+  .score-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .score-high { background: rgba(0,255,136,0.12); color: var(--green); }
+  .score-mid { background: rgba(255,217,61,0.12); color: var(--yellow); }
+  .score-low { background: rgba(255,61,90,0.12); color: var(--red); }
+
+  /* SIGNALS FEED */
+  .signals-feed { padding: 8px 0; }
+
+  .signal-item {
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(30,42,56,0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: background 0.15s;
+    cursor: pointer;
+    animation: slideIn 0.4s ease forwards;
+    opacity: 0;
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .signal-item:hover { background: rgba(0,229,255,0.03); }
+  .signal-item:last-child { border-bottom: none; }
+
+  .signal-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .signal-expert {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .signal-time {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+  }
+
+  .signal-asset {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .signal-text {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .signal-bottom {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .price-change {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+
+  .price-change.pos { background: rgba(0,255,136,0.1); color: var(--green); }
+  .price-change.neg { background: rgba(255,61,90,0.1); color: var(--red); }
+
+  /* BOTTOM ROW */
+  .bottom-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding-bottom: 32px;
+  }
+
+  @media (max-width: 700px) {
+    .bottom-row { grid-template-columns: 1fr; }
+  }
+
+  .mini-signal {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(30,42,56,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .mini-signal:last-child { border-bottom: none; }
+
+  .mini-left { flex: 1; }
+  .mini-expert { font-size: 12px; font-weight: 600; }
+  .mini-detail { font-size: 10px; color: var(--muted); font-family: var(--font-mono); margin-top: 2px; }
+  .mini-return { font-family: var(--font-mono); font-size: 13px; font-weight: 500; }
+
+  /* FILTER BAR */
+  .filter-bar {
+    padding: 16px 0 0;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .filter-btn:hover, .filter-btn.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(0,229,255,0.05);
+  }
+
+  /* MARKET TICKER */
+  .ticker-bar {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 0;
+    overflow: hidden;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  .ticker-scroll {
+    display: flex;
+    gap: 32px;
+    animation: ticker 30s linear infinite;
+    white-space: nowrap;
+  }
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+  }
+
+  .ticker-symbol { color: var(--text); font-weight: 500; }
+  .ticker-price { color: var(--muted); }
+  .ticker-chg { font-weight: 500; }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .leaderboard-table th:nth-child(4),
+    .leaderboard-table td:nth-child(4),
+    .leaderboard-table th:nth-child(5),
+    .leaderboard-table td:nth-child(5) { display: none; }
+  }
+
+  .confidence-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 4px;
+  }
+
+  .conf-high { background: var(--green); }
+  .conf-mid { background: var(--yellow); }
+  .conf-low { background: var(--red); }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <div class="logo-icon">📡</div>
+      <div>
+        <h1>FinSignal</h1>
+        <span>Uzman Sinyal Takip Platformu</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="last-update">
+        <span class="dot"></span>Son güncelleme: Bugün 09:00
+      </div>
+      <div class="date-badge" id="currentDate"></div>
+    </div>
+  </header>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterMarket('all')">Tümü</button>
+    <button class="filter-btn" onclick="filterMarket('crypto')">🪙 Kripto</button>
+    <button class="filter-btn" onclick="filterMarket('stocks')">📈 Hisse</button>
+    <button class="filter-btn" onclick="filterMarket('macro')">🌍 Makro</button>
+    <button class="filter-btn" onclick="filterMarket('commodities')">🥇 Emtia</button>
+  </div>
+
+  <!-- STAT CARDS -->
+  <div class="stats-row">
+    <div class="stat-card blue">
+      <div class="stat-label">Toplam Uzman</div>
+      <div class="stat-value" style="color:var(--accent)">11</div>
+      <div class="stat-sub">aktif bu hafta</div>
+    </div>
+    <div class="stat-card orange">
+      <div class="stat-label">Toplam Sinyal</div>
+      <div class="stat-value" style="color:var(--accent2)">34</div>
+      <div class="stat-sub">son 7 gün</div>
+    </div>
+    <div class="stat-card green">
+      <div class="stat-label">Doğru Sinyal</div>
+      <div class="stat-value" style="color:var(--green)">71%</div>
+      <div class="stat-sub">ortalama doğruluk</div>
+    </div>
+    <div class="stat-card red">
+      <div class="stat-label">En İyi Getiri</div>
+      <div class="stat-value" style="color:var(--green)">+18.4%</div>
+      <div class="stat-sub">Willy Woo — BTC</div>
+    </div>
+    <div class="stat-card yellow">
+      <div class="stat-label">Market Duygu</div>
+      <div class="stat-value" style="color:var(--yellow)">62</div>
+      <div class="stat-sub">Açgözlülük</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- MARKET TICKER -->
+<div class="ticker-bar" style="margin-top:20px">
+  <div class="ticker-scroll" id="ticker"></div>
+</div>
+
+<div class="container">
+
+  <!-- MAIN GRID -->
+  <div class="main-grid">
+
+    <!-- LEFT: LEADERBOARD -->
+    <div>
+      <div class="section">
+        <div class="section-header">
+          <span class="section-title">🏆 Uzman Liderboard</span>
+          <span class="section-badge">Son 7 Gün</span>
+        </div>
+        <table class="leaderboard-table" id="leaderboardTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Uzman</th>
+              <th>Sinyal</th>
+              <th>Doğruluk</th>
+              <th>Ort. Getiri</th>
+              <th>En İyi</th>
+              <th>Puan</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboardBody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- RIGHT: SIGNAL FEED -->
+    <div>
+      <div class="section" style="height:100%">
+        <div class="section-header">
+          <span class="section-title">📡 Sinyal Akışı</span>
+          <span class="section-badge" id="signalCount">34 sinyal</span>
+        </div>
+        <div class="signals-feed" id="signalsFeed"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM ROW -->
+  <div class="bottom-row">
+
+    <!-- BEST SIGNALS -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">🔥 En Karlı Sinyaller</span>
+        <span class="section-badge">Bu Hafta</span>
+      </div>
+      <div id="bestSignals"></div>
+    </div>
+
+    <!-- WORST SIGNALS -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">❌ Başarısız Sinyaller</span>
+        <span class="section-badge">Bu Hafta</span>
+      </div>
+      <div id="worstSignals"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+// ─── DATA ───────────────────────────────────────────────
+const experts = [
+  { name:"Willy Woo",       cat:"Kripto",  emoji:"₿",  color:"#00e5ff", signals:5, accuracy:80, avgReturn:8.2,  best:18.4, worst:-3.1, score:92 },
+  { name:"Arthur Hayes",    cat:"Kripto",  emoji:"⚔️", color:"#ff6b35", signals:4, accuracy:75, avgReturn:6.8,  best:12.1, worst:-2.4, score:88 },
+  { name:"Lyn Alden",       cat:"Makro",   emoji:"🌍", color:"#ffd93d", signals:6, accuracy:83, avgReturn:5.4,  best:9.2,  worst:-1.8, score:87 },
+  { name:"PlanB",           cat:"Kripto",  emoji:"📊", color:"#ff3d5a", signals:3, accuracy:67, avgReturn:7.1,  best:14.3, worst:-5.2, score:79 },
+  { name:"Howard Marks",    cat:"Hisse",   emoji:"📈", color:"#00ff88", signals:4, accuracy:75, avgReturn:3.9,  best:7.1,  worst:-0.8, score:78 },
+  { name:"Raoul Pal",       cat:"Makro",   emoji:"🌊", color:"#a78bfa", signals:5, accuracy:60, avgReturn:4.2,  best:10.5, worst:-6.3, score:71 },
+  { name:"Michael Burry",   cat:"Hisse",   emoji:"🐻", color:"#f472b6", signals:2, accuracy:50, avgReturn:2.1,  best:5.4,  worst:-4.1, score:58 },
+  { name:"Bill Ackman",     cat:"Hisse",   emoji:"💼", color:"#34d399", signals:3, accuracy:67, avgReturn:3.3,  best:6.8,  worst:-2.2, score:63 },
+  { name:"Ki Young Ju",     cat:"Kripto",  emoji:"🔭", color:"#60a5fa", signals:4, accuracy:75, avgReturn:5.9,  best:11.2, worst:-2.9, score:77 },
+  { name:"Stanley Druckenmiller", cat:"Makro", emoji:"🎯", color:"#fb923c", signals:3, accuracy:67, avgReturn:4.6, best:8.3, worst:-1.5, score:72 },
+  { name:"Chris Burniske",  cat:"Kripto",  emoji:"🚀", color:"#e879f9", signals:3, accuracy:67, avgReturn:6.1,  best:13.7, worst:-4.8, score:74 },
+];
+
+const signals = [
+  { expert:"Willy Woo",    asset:"BTC",  type:"BULL", conf:"High",  time:"18 Şub, 08:30", text:"On-chain metrikleri güçlü birikim sinyali veriyor.", price:"$96,400", current:"$99,200", change:"+2.9%", pos:true },
+  { expert:"Arthur Hayes",  asset:"ETH",  type:"BULL", conf:"High",  time:"17 Şub, 14:00", text:"Likidite koşulları ETH için olumlu. Yükseliş bekliyorum.", price:"$2,680", current:"$2,810", change:"+4.9%", pos:true },
+  { expert:"Lyn Alden",     asset:"Altın", type:"BULL",conf:"High",  time:"17 Şub, 10:15", text:"Enflasyon verileri beklentilerin üzerinde. Altın tercih ediyorum.", price:"$2,890", current:"$2,940", change:"+1.7%", pos:true },
+  { expert:"PlanB",         asset:"BTC",  type:"BULL", conf:"Med",   time:"16 Şub, 20:00", text:"Stock-to-Flow modeli 150K hedefini işaret ediyor.", price:"$94,500", current:"$99,200", change:"+5.0%", pos:true },
+  { expert:"Howard Marks",  asset:"S&P",  type:"NEU",  conf:"High",  time:"16 Şub, 09:00", text:"Piyasa değerlemeleri gerilmiş durumda, dikkatli olunmalı.", price:"5,820", current:"5,870", change:"+0.9%", pos:true },
+  { expert:"Raoul Pal",     asset:"SOL",  type:"BULL", conf:"Med",   time:"15 Şub, 16:30", text:"Solana ekosistemi büyümesi devam ediyor.", price:"$188", current:"$172", change:"-8.5%", pos:false },
+  { expert:"Michael Burry", asset:"NVDA", type:"BEAR", conf:"Low",   time:"15 Şub, 11:00", text:"AI çip talebinde yavaşlama işaretleri görüyorum.", price:"$132", current:"$139", change:"+5.3%", pos:false },
+  { expert:"Ki Young Ju",   asset:"BTC",  type:"BULL", conf:"High",  time:"14 Şub, 09:00", text:"Miner capitulation sona erdi. Boğa piyasası devam ediyor.", price:"$95,800", current:"$99,200", change:"+3.5%", pos:true },
+  { expert:"Bill Ackman",   asset:"USD",  type:"BEAR", conf:"Med",   time:"14 Şub, 14:00", text:"Fed politikası dolara baskı yapacak.", price:"104.2", current:"103.8", change:"+0.4%", pos:true },
+  { expert:"Stanley Druckenmiller", asset:"Altın", type:"BULL", conf:"High", time:"13 Şub, 10:00", text:"Merkez bankası alımları altın fiyatını desteklemeye devam edecek.", price:"$2,870", current:"$2,940", change:"+2.4%", pos:true },
+  { expert:"Chris Burniske",asset:"SOL",  type:"BULL", conf:"Med",   time:"13 Şub, 17:00", text:"Solana TVL rekor kırıyor, fiyat gecikmeli takip edecek.", price:"$184", current:"$172", change:"-6.5%", pos:false },
+  { expert:"Willy Woo",     asset:"ETH",  type:"BULL", conf:"Med",   time:"12 Şub, 12:00", text:"ETH/BTC paritesi kritik destek üzerinde tutuyor.", price:"$2,610", current:"$2,810", change:"+7.7%", pos:true },
+];
+
+const bestSignals = [
+  { expert:"Willy Woo",       asset:"BTC",  dir:"BULL", ret:"+18.4%" },
+  { expert:"PlanB",           asset:"BTC",  dir:"BULL", ret:"+14.3%" },
+  { expert:"Chris Burniske",  asset:"AVAX", dir:"BULL", ret:"+13.7%" },
+  { expert:"Arthur Hayes",    asset:"ETH",  dir:"BULL", ret:"+12.1%" },
+  { expert:"Ki Young Ju",     asset:"SOL",  dir:"BULL", ret:"+11.2%" },
+];
+
+const worstSignals = [
+  { expert:"Raoul Pal",       asset:"SOL",  dir:"BULL", ret:"-6.3%" },
+  { expert:"Chris Burniske",  asset:"SOL",  dir:"BULL", ret:"-4.8%" },
+  { expert:"Michael Burry",   asset:"NVDA", dir:"BEAR", ret:"-5.3%" },
+  { expert:"PlanB",           asset:"XRP",  dir:"BULL", ret:"-5.2%" },
+  { expert:"Raoul Pal",       asset:"MATIC",dir:"BULL", ret:"-4.9%" },
+];
+
+const tickerData = [
+  { sym:"BTC", price:"$99,241", chg:"+2.9%", pos:true },
+  { sym:"ETH", price:"$2,812", chg:"+4.9%", pos:true },
+  { sym:"SOL", price:"$172", chg:"-8.5%", pos:false },
+  { sym:"GOLD", price:"$2,940", chg:"+1.7%", pos:true },
+  { sym:"S&P 500", price:"5,872", chg:"+0.9%", pos:true },
+  { sym:"NASDAQ", price:"18,940", chg:"+1.1%", pos:true },
+  { sym:"USD/TRY", price:"35.82", chg:"+0.3%", pos:false },
+  { sym:"WTI OIL", price:"$72.4", chg:"-0.8%", pos:false },
+  { sym:"NVDA", price:"$139", chg:"+2.3%", pos:true },
+  { sym:"XRP", price:"$0.58", chg:"-3.1%", pos:false },
+];
+
+// ─── RENDER ─────────────────────────────────────────────
+
+// Date
+document.getElementById('currentDate').textContent = new Date().toLocaleDateString('tr-TR', {day:'numeric',month:'long',year:'numeric'});
+
+// Ticker
+const tickerEl = document.getElementById('ticker');
+const items = [...tickerData, ...tickerData].map(t => `
+  <span class="ticker-item">
+    <span class="ticker-symbol">${t.sym}</span>
+    <span class="ticker-price">${t.price}</span>
+    <span class="ticker-chg ${t.pos?'pos':'neg'}">${t.chg}</span>
+  </span>
+`).join('');
+tickerEl.innerHTML = items;
+
+// Leaderboard
+function renderLeaderboard(data) {
+  const tbody = document.getElementById('leaderboardBody');
+  tbody.innerHTML = data.map((e, i) => {
+    const rankClass = i === 0 ? 'rank-1' : i === 1 ? 'rank-2' : i === 2 ? 'rank-3' : '';
+    const rankIcon = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `#${i+1}`;
+    const scoreClass = e.score >= 85 ? 'score-high' : e.score >= 70 ? 'score-mid' : 'score-low';
+    const fillColor = e.accuracy >= 75 ? 'var(--green)' : e.accuracy >= 60 ? 'var(--yellow)' : 'var(--red)';
+    return `
+      <tr>
+        <td><span class="rank ${rankClass}">${rankIcon}</span></td>
+        <td>
+          <div class="expert-info">
+            <div class="expert-avatar" style="background:${e.color}22; color:${e.color}">${e.emoji}</div>
+            <div>
+              <div class="expert-name">${e.name}</div>
+              <div class="expert-category">${e.cat}</div>
+            </div>
+          </div>
+        </td>
+        <td>${e.signals}</td>
+        <td>
+          <div class="accuracy-bar-wrap">
+            <div class="accuracy-bar"><div class="accuracy-fill" style="width:${e.accuracy}%;background:${fillColor}"></div></div>
+            <span style="font-family:var(--font-mono);font-size:12px;color:${fillColor}">${e.accuracy}%</span>
+          </div>
+        </td>
+        <td class="${e.avgReturn > 0 ? 'pos' : 'neg'}">+${e.avgReturn}%</td>
+        <td class="pos">+${e.best}%</td>
+        <td><span class="score-badge ${scoreClass}">${e.score}</span></td>
+      </tr>
+    `;
+  }).join('');
+}
+
+renderLeaderboard(experts);
+
+// Signal Feed
+function renderSignals(data) {
+  const feed = document.getElementById('signalsFeed');
+  feed.innerHTML = data.map((s, i) => {
+    const typeClass = s.type === 'BULL' ? 'tag-bull' : s.type === 'BEAR' ? 'tag-bear' : 'tag-neu';
+    const typeLabel = s.type === 'BULL' ? '▲ BULLISH' : s.type === 'BEAR' ? '▼ BEARISH' : '● NEUTRAL';
+    const confClass = s.conf === 'High' ? 'conf-high' : s.conf === 'Med' ? 'conf-mid' : 'conf-low';
+    return `
+      <div class="signal-item" style="animation-delay:${i*0.05}s">
+        <div class="signal-top">
+          <span class="signal-expert">${s.expert}</span>
+          <span class="signal-time">${s.time}</span>
+        </div>
+        <div class="signal-bottom">
+          <span class="signal-asset">${s.asset}</span>
+          <span class="signal-tag ${typeClass}">${typeLabel}</span>
+          <span style="font-size:10px;color:var(--muted);font-family:var(--font-mono)">
+            <span class="confidence-dot ${confClass}"></span>${s.conf}
+          </span>
+        </div>
+        <div class="signal-text">${s.text}</div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:10px;color:var(--muted);font-family:var(--font-mono)">Giriş: ${s.price}</span>
+          <span style="font-size:10px;color:var(--muted)">→</span>
+          <span style="font-size:10px;color:var(--muted);font-family:var(--font-mono)">Şimdi: ${s.current}</span>
+          <span class="price-change ${s.pos?'pos':'neg'}">${s.change}</span>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+renderSignals(signals);
+
+// Best/Worst
+function renderMini(data, elId, isPos) {
+  document.getElementById(elId).innerHTML = data.map(s => `
+    <div class="mini-signal">
+      <div class="mini-left">
+        <div class="mini-expert">${s.expert}</div>
+        <div class="mini-detail">${s.asset} · ${s.dir}</div>
+      </div>
+      <div class="mini-return ${isPos?'pos':'neg'}">${s.ret}</div>
+    </div>
+  `).join('');
+}
+
+renderMini(bestSignals, 'bestSignals', true);
+renderMini(worstSignals, 'worstSignals', false);
+
+// Filter
+function filterMarket(cat) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+
+  const catMap = { crypto:'Kripto', stocks:'Hisse', macro:'Makro', commodities:'Emtia' };
+  const filtered = cat === 'all' ? experts : experts.filter(e => e.cat === catMap[cat]);
+  renderLeaderboard(filtered);
+
+  const sigFiltered = cat === 'all' ? signals : signals.filter(s => {
+    const cryptoAssets = ['BTC','ETH','SOL','XRP','AVAX','MATIC'];
+    const stockAssets = ['S&P','NVDA','AAPL'];
+    const commAssets = ['Altın','OIL','WTI'];
+    if(cat==='crypto') return cryptoAssets.includes(s.asset);
+    if(cat==='stocks') return stockAssets.some(a => s.asset.includes(a));
+    if(cat==='commodities') return commAssets.includes(s.asset);
+    if(cat==='macro') return ['USD','Altın'].includes(s.asset);
+    return true;
+  });
+  renderSignals(sigFiltered);
+  document.getElementById('signalCount').textContent = sigFiltered.length + ' sinyal';
+}
+</script>
+</body>
+</html>
