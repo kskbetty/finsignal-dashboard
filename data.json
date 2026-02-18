@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "18.02.2026 09:46:04",
+  "lastUpdate": "18.02.2026 09:51:00",
   "date": "18 Şubat 2026",
   "marketSentiment": "NEUTRAL",
   "sentimentScore": 50,
@@ -8,27 +8,27 @@
   "topRisk": "",
   "prices": {
     "btc": {
-      "price": 68227,
-      "change24h": 0.2501080261564799
+      "price": 68199,
+      "change24h": 0.20930320872045177
     },
     "eth": {
-      "price": 2021.07,
-      "change24h": 2.4332512392759225
+      "price": 2019.77,
+      "change24h": 2.350014683972257
     },
     "sol": {
-      "price": 85.55,
-      "change24h": -0.27731114188592354
+      "price": 85.51,
+      "change24h": -0.29894136650691017
     },
     "xrp": {
       "price": 1.49,
-      "change24h": 2.3520772515552584
+      "change24h": 2.2576343074819496
     }
   },
   "trendingCoins": [
     "Bitcoin",
+    "Bittensor",
     "LayerZero",
     "Pudgy Penguins",
-    "World Liberty Financial",
     "Solana"
   ],
   "signals": []
