@@ -1,3 +1,81 @@
 {
-  "debug": "[{\"json\":{\"output\":[{\"id\":\"msg_061088748607da490069958e7c4bc88194a720e89d3172ad8f\",\"type\":\"message\",\"status\":\"completed\",\"content\":[{\"type\":\"output_text\",\"annotations\":[],\"logprobs\":[],\"text\":\"{\\n  \\\"marketSentiment\\\": \\\"BULLISH\\\",\\n  \\\"sentimentScore\\\": 72,\\n  \\\"signals\\\": [\\n    {\\n      \\\"expert\\\": \\\"Willy Woo\\\",\\n      \\\"asset\\\": \\\"BTC\\\",\\n      \\\"type\\\": \\\"BULL\\\",\\n      \\\"confidence\\\": \\\"High\\\",\\n      \\\"text\\\": \\\"On-chain metrikler güçlü\\\"\\n    },\\n    {\\n      \\\"expert\\\": \\\"Arthur Hayes\\\",\\n      \\\"asset\\\": \\\"ETH\\\",\\n      \\\"type\\\": \\\"BULL\\\",\\n      \\\"confidence\\\": \\\"Med\\\",\\n      \\\"text\\\": \\\"Likidite koşulları olumlu\\\"\\n    },\\n    {\\n      \\\"expert\\\": \\\"PlanB\\\",\\n      \\\"asset\\\": \\\"BTC\\\",\\n      \\\"type\\\": \\\"BULL\\\",\\n      \\\"confidence\\\": \\\"High\\\",\\n      \\\"text\\\": \\\"Model hedefi işaret ediyor\\\"\\n    },\\n    {\\n      \\\"expert\\\": \\\"Raoul Pal\\\",\\n      \\\"asset\\\": \\\"SOL\\\",\\n      \\\"type\\\": \\\"NEU\\\",\\n      \\\"confidence\\\": \\\"Low\\\",\\n      \\\"text\\\": \\\"Bekleme modunda\\\"\\n    },\\n    {\\n      \\\"expert\\\": \\\"Lyn Alden\\\",\\n      \\\"asset\\\": \\\"XRP\\\",\\n      \\\"type\\\": \\\"BULL\\\",\\n      \\\"confidence\\\": \\\"Med\\\",\\n      \\\"text\\\": \\\"Makro uyumlu\\\"\\n    }\\n  ],\\n  \\\"summary\\\": \\\"Piyasa genel olarak nötr seyrediyor.\\\",\\n  \\\"topOpportunity\\\": \\\"BTC güçlü destek üzerinde.\\\",\\n  \\\"topRisk\\\": \\\"Küresel likidite belirsizliği.\\\"\\n}\"}],\"role\":\"assistant\"}]},\"pairedItem\":{\"item\":0}}]"
+  "lastUpdate": "18.02.2026 10:05:00",
+  "date": "18 Şubat 2026",
+  "marketSentiment": "BULLISH",
+  "sentimentScore": 72,
+  "summary": "Piyasa genel olarak nötr seyrediyor.",
+  "topOpportunity": "BTC güçlü destek üzerinde.",
+  "topRisk": "Küresel likidite belirsizliği.",
+  "prices": {
+    "btc": {
+      "price": 68078,
+      "change24h": -0.028556021824262062
+    },
+    "eth": {
+      "price": 2013.4,
+      "change24h": 1.9138148701390718
+    },
+    "sol": {
+      "price": 85.27,
+      "change24h": -0.7493520006429002
+    },
+    "xrp": {
+      "price": 1.49,
+      "change24h": 1.811102614438688
+    }
+  },
+  "trendingCoins": [
+    "Bitcoin",
+    "LayerZero",
+    "Pudgy Penguins",
+    "Bittensor",
+    "Solana"
+  ],
+  "signals": [
+    {
+      "id": 0,
+      "expert": "Willy Woo",
+      "asset": "BTC",
+      "type": "BULL",
+      "confidence": "High",
+      "text": "On-chain metrikler güçlü",
+      "time": "10:05"
+    },
+    {
+      "id": 1,
+      "expert": "Arthur Hayes",
+      "asset": "ETH",
+      "type": "BULL",
+      "confidence": "Med",
+      "text": "Likidite koşulları olumlu",
+      "time": "10:05"
+    },
+    {
+      "id": 2,
+      "expert": "PlanB",
+      "asset": "BTC",
+      "type": "BULL",
+      "confidence": "High",
+      "text": "Model hedefi işaret ediyor",
+      "time": "10:05"
+    },
+    {
+      "id": 3,
+      "expert": "Raoul Pal",
+      "asset": "SOL",
+      "type": "NEU",
+      "confidence": "Low",
+      "text": "Bekleme modunda",
+      "time": "10:05"
+    },
+    {
+      "id": 4,
+      "expert": "Lyn Alden",
+      "asset": "XRP",
+      "type": "BULL",
+      "confidence": "Med",
+      "text": "Makro uyumlu",
+      "time": "10:05"
+    }
+  ]
 }
