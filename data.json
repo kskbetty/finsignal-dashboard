@@ -1,35 +1,81 @@
 {
-  "lastUpdate": "18.02.2026 09:58:13",
+  "lastUpdate": "18.02.2026 10:02:27",
   "date": "18 Şubat 2026",
-  "marketSentiment": "NEUTRAL",
-  "sentimentScore": 50,
-  "summary": "",
-  "topOpportunity": "",
-  "topRisk": "",
+  "marketSentiment": "BULLISH",
+  "sentimentScore": 72,
+  "summary": "Piyasa genel olarak nötr seyrediyor.",
+  "topOpportunity": "BTC güçlü destek üzerinde.",
+  "topRisk": "Küresel likidite belirsizliği.",
   "prices": {
     "btc": {
-      "price": 68164,
-      "change24h": 0.1250703936346569
+      "price": 68104,
+      "change24h": 0.009008225611872178
     },
     "eth": {
-      "price": 2016.3,
-      "change24h": 2.1102826519885003
+      "price": 2014.72,
+      "change24h": 1.9806366111427938
     },
     "sol": {
-      "price": 85.39,
-      "change24h": -0.6053688864511745
+      "price": 85.32,
+      "change24h": -0.7005134253264979
     },
     "xrp": {
       "price": 1.49,
-      "change24h": 1.9100984835978132
+      "change24h": 1.8303924237473508
     }
   },
   "trendingCoins": [
     "Bitcoin",
-    "Bittensor",
     "LayerZero",
     "Pudgy Penguins",
+    "Bittensor",
     "Solana"
   ],
-  "signals": []
+  "signals": [
+    {
+      "id": 0,
+      "expert": "Willy Woo",
+      "asset": "BTC",
+      "type": "BULL",
+      "confidence": "High",
+      "text": "On-chain metrikler güçlü",
+      "time": "10:02"
+    },
+    {
+      "id": 1,
+      "expert": "Arthur Hayes",
+      "asset": "ETH",
+      "type": "BULL",
+      "confidence": "Med",
+      "text": "Likidite koşulları olumlu",
+      "time": "10:02"
+    },
+    {
+      "id": 2,
+      "expert": "PlanB",
+      "asset": "BTC",
+      "type": "BULL",
+      "confidence": "High",
+      "text": "Model hedefi işaret ediyor",
+      "time": "10:02"
+    },
+    {
+      "id": 3,
+      "expert": "Raoul Pal",
+      "asset": "SOL",
+      "type": "NEU",
+      "confidence": "Low",
+      "text": "Bekleme modunda",
+      "time": "10:02"
+    },
+    {
+      "id": 4,
+      "expert": "Lyn Alden",
+      "asset": "XRP",
+      "type": "BULL",
+      "confidence": "Med",
+      "text": "Makro uyumlu",
+      "time": "10:02"
+    }
+  ]
 }
