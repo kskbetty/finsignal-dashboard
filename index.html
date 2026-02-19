@@ -168,6 +168,8 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
     <div class="hstat"><div class="hstat-val" id="hETH" style="color:var(--accent)">—</div><div class="hstat-lbl">ETH</div></div>
     <div class="hstat"><div class="hstat-val" id="hSPX" style="color:var(--hold)">—</div><div class="hstat-lbl">S&P 500</div></div>
     <div class="hstat"><div class="hstat-val" id="hGold" style="color:#ffd700">—</div><div class="hstat-lbl">ALTIN</div></div>
+    <div class="hstat"><div class="hstat-val" id="hTHYAO" style="color:var(--purple)">—</div><div class="hstat-lbl">THYAO</div></div>
+    <div class="hstat"><div class="hstat-val" id="hFNG" style="color:var(--sell)">—</div><div class="hstat-lbl">Korku/Açgözlülük</div></div>
     <div class="live"><span class="dot"></span><span id="updateTime">Yükleniyor</span></div>
   </div>
 </div>
@@ -226,6 +228,62 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
         <div style="padding-top:4px;font-size:11px;color:var(--muted2);line-height:1.6" id="kSummary">Yükleniyor...</div>
       </div>
     </div>
+  </div>
+
+  <!-- BIST + FON KARTLARI -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;padding-bottom:14px">
+    <div class="card">
+      <div class="chead"><span class="ctitle">🇹🇷 BIST Hisseleri</span><span class="cbadge" id="bistTime">—</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
+        <div style="padding:14px 18px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)">
+          <div style="font-size:11px;color:var(--muted);font-family:var(--mono);margin-bottom:4px">THYAO</div>
+          <div style="font-size:18px;font-weight:700;font-family:var(--mono)" id="bTHYAO">—</div>
+          <div style="font-size:11px;font-family:var(--mono)" id="bTHYAOc">—</div>
+        </div>
+        <div style="padding:14px 18px;border-bottom:1px solid var(--border)">
+          <div style="font-size:11px;color:var(--muted);font-family:var(--mono);margin-bottom:4px">GARAN</div>
+          <div style="font-size:18px;font-weight:700;font-family:var(--mono)" id="bGARAN">—</div>
+          <div style="font-size:11px;font-family:var(--mono)" id="bGARANc">—</div>
+        </div>
+        <div style="padding:14px 18px;border-right:1px solid var(--border)">
+          <div style="font-size:11px;color:var(--muted);font-family:var(--mono);margin-bottom:4px">ASELS</div>
+          <div style="font-size:18px;font-weight:700;font-family:var(--mono)" id="bASELS">—</div>
+          <div style="font-size:11px;font-family:var(--mono)" id="bASELSc">—</div>
+        </div>
+        <div style="padding:14px 18px">
+          <div style="font-size:11px;color:var(--muted);font-family:var(--mono);margin-bottom:4px">EREGL</div>
+          <div style="font-size:18px;font-weight:700;font-family:var(--mono)" id="bEREGL">—</div>
+          <div style="font-size:11px;font-family:var(--mono)" id="bEREGLc">—</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="chead"><span class="ctitle">📊 Fear & Greed Index</span><span class="cbadge">alternative.me</span></div>
+      <div style="padding:18px">
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:14px">
+          <div style="width:80px;height:80px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;border:4px solid var(--border)" id="fngCircle">
+            <div style="font-size:24px;font-weight:700;font-family:var(--mono)" id="fngVal">—</div>
+            <div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1px">/100</div>
+          </div>
+          <div>
+            <div style="font-size:20px;font-weight:700;margin-bottom:4px" id="fngLabel">—</div>
+            <div style="font-size:12px;color:var(--muted2)">0-24: Aşırı Korku<br>25-49: Korku<br>50-74: Açgözlülük<br>75-100: Aşırı Açgözlülük</div>
+          </div>
+        </div>
+        <div style="height:8px;background:linear-gradient(90deg,#e8192c,#d48800,#00a854);border-radius:4px;position:relative">
+          <div id="fngNeedle" style="position:absolute;top:-4px;width:4px;height:16px;background:var(--text);border-radius:2px;transform:translateX(-50%);left:50%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEFAS FON SİNYALLERİ -->
+  <div class="card" style="margin-bottom:14px">
+    <div class="chead"><span class="ctitle">🏦 TEFAS Fon Önerileri</span><span class="cbadge" id="fonTime">Günlük AI Analiz</span></div>
+    <div id="fonSignals" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0">
+      <div class="empty">Yükleniyor...</div>
+    </div>
+    <div class="snote">⚠️ Fon önerileri yapay zeka analizidir, yatırım tavsiyesi değildir. Kararlarınızı kendi araştırmanızla destekleyin.</div>
   </div>
 
   <div class="gmain">
@@ -498,11 +556,109 @@ fetch('data.json?t='+Date.now())
         `<div class="si" style="padding:9px 16px"><div class="si-top"><span class="si-sym" style="font-size:12px">${c}</span><span style="font-family:var(--mono);font-size:9px;color:var(--muted)">#${i+1}</span></div></div>`
       ).join('');
     }
+
+    // BIST hisseleri
+    if(data.bist){
+      const b=data.bist;
+      const bistItems=[
+        {key:'thyao',id:'bTHYAO'},{key:'garan',id:'bGARAN'},
+        {key:'asels',id:'bASELS'},{key:'eregl',id:'bEREGL'}
+      ];
+      bistItems.forEach(({key,id})=>{
+        const v=b[key];
+        if(!v) return;
+        const el=document.getElementById(id);
+        const elc=document.getElementById(id+'c');
+        if(el) el.textContent=Number(v.price||0).toFixed(2)+' ₺';
+        if(elc){
+          const c=v.change||0;
+          elc.textContent=(c>=0?'+':'')+Number(c).toFixed(2)+'%';
+          elc.className=c>=0?'up':'dn';
+        }
+      });
+      if(b.thyao) {
+        const ht=document.getElementById('hTHYAO');
+        if(ht) { ht.textContent=Number(b.thyao.price||0).toFixed(2)+'₺'; ht.className='hstat-val '+(b.thyao.change>=0?'up':'dn'); }
+      }
+      document.getElementById('bistTime').textContent=new Date().toLocaleTimeString('tr-TR',{hour:'2-digit',minute:'2-digit'});
+    }
+
+    // Fear & Greed
+    if(data.fearGreed){
+      const fg=data.fearGreed;
+      const val=fg.value||50;
+      const colors={};
+      let fgColor='var(--hold)';
+      if(val<=24) fgColor='var(--sell)';
+      else if(val<=49) fgColor='#e06c00';
+      else if(val<=74) fgColor='var(--buy)';
+      else fgColor='#00c853';
+      
+      const fgVal=document.getElementById('fngVal');
+      const fgLabel=document.getElementById('fngLabel');
+      const fgCircle=document.getElementById('fngCircle');
+      const fgNeedle=document.getElementById('fngNeedle');
+      const hFng=document.getElementById('hFNG');
+      
+      if(fgVal) fgVal.textContent=val;
+      if(fgLabel){ fgLabel.textContent=fg.label||'Neutral'; fgLabel.style.color=fgColor; }
+      if(fgCircle) fgCircle.style.borderColor=fgColor;
+      if(fgNeedle) fgNeedle.style.left=val+'%';
+      if(hFng){ hFng.textContent=val+' '+getLabelTR(val); hFng.style.color=fgColor; }
+    }
+
+    // Ticker guncelle - BIST dahil
+    const p=data.prices||{};
+    const b2=data.bist||{};
+    const ticks=[
+      {s:'BTC',p:'$'+Number(p.btc?.price||0).toLocaleString(),c:p.btc?.change24h||0},
+      {s:'ETH',p:'$'+Number(p.eth?.price||0).toLocaleString(),c:p.eth?.change24h||0},
+      {s:'SOL',p:'$'+Number(p.sol?.price||0).toLocaleString(),c:p.sol?.change24h||0},
+      {s:'XRP',p:'$'+Number(p.xrp?.price||0).toLocaleString(),c:p.xrp?.change24h||0},
+      {s:'S&P',p:data.stocks?.spx?Number(data.stocks.spx).toFixed(0):'—',c:data.stocks?.spxChange||0},
+      {s:'THYAO',p:b2.thyao?Number(b2.thyao.price).toFixed(2)+'₺':'—',c:b2.thyao?.change||0},
+      {s:'GARAN',p:b2.garan?Number(b2.garan.price).toFixed(2)+'₺':'—',c:b2.garan?.change||0},
+      {s:'ASELS',p:b2.asels?Number(b2.asels.price).toFixed(2)+'₺':'—',c:b2.asels?.change||0},
+      {s:'F&G',p:(data.fearGreed?.value||'—')+'/100',c:0},
+    ];
+    document.getElementById('ticker').innerHTML=[...ticks,...ticks].map(t=>
+      `<span class="tick"><span class="tick-sym">${t.s}</span><span class="tick-price">${t.p}</span><span class="${t.c>=0?'up':'dn'}">${t.c!==0?(t.c>=0?'+':'')+Number(t.c).toFixed(2)+'%':''}</span></span>`
+    ).join('');
+
+    // FON SİNYALLERİ - signals icinden fon olanlari filtrele
+    const fonKodlari=['YPT','YLB','YVD','YKT','YZG','YTD','TP2','PRY','HVT','PPT','PAB'];
+    const fonSigs=(data.signals||[]).filter(s=>fonKodlari.includes(s.asset));
+    const fonEl=document.getElementById('fonSignals');
+    if(fonEl && fonSigs.length>0){
+      fonEl.innerHTML=fonSigs.map(s=>{
+        const tc=s.type==='BULL'||s.type==='BUY'?'var(--buy)':s.type==='BEAR'||s.type==='SELL'?'var(--sell)':'var(--hold)';
+        const tl=s.type==='BULL'||s.type==='BUY'?'AL':s.type==='BEAR'||s.type==='SELL'?'SAT':'BEKLE';
+        const bg=s.type==='BULL'||s.type==='BUY'?'rgba(0,168,84,.06)':s.type==='BEAR'||s.type==='SELL'?'rgba(232,25,44,.06)':'rgba(212,136,0,.06)';
+        return `<div style="padding:14px 18px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);background:${bg}">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+            <span style="font-family:var(--mono);font-size:15px;font-weight:700">${s.asset}</span>
+            <span style="font-size:11px;font-weight:700;color:${tc};background:${bg};padding:2px 8px;border-radius:4px;border:1px solid ${tc}">${tl}</span>
+          </div>
+          <div style="font-size:11px;color:var(--muted2);line-height:1.5">${s.text}</div>
+          <div style="font-size:10px;color:var(--muted);font-family:var(--mono);margin-top:6px">${s.expert}</div>
+        </div>`;
+      }).join('');
+    } else if(fonEl) {
+      fonEl.innerHTML='<div class="empty" style="padding:20px">Fon sinyali henüz yok</div>';
+    }
+
   })
   .catch(err=>{
     console.error('data.json yüklenemedi:',err);
     document.getElementById('signalsFeed').innerHTML='<div class="empty">⚠️ Veri bağlantısı kurulamadı.</div>';
   });
+
+function getLabelTR(val){
+  if(val<=24) return 'Aşırı Korku';
+  if(val<=49) return 'Korku';
+  if(val<=74) return 'Açgözlülük';
+  return 'Aşırı Açgözlülük';
+}
 
 // HISTORY.JSON OKU
 fetch('history.json?t='+Date.now())
