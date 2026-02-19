@@ -321,14 +321,15 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
     <div class="chead"><span class="ctitle">📋 Sinyal Geçmişi & Gerçekleşen Sonuçlar</span><span class="cbadge">Son 30 Gün</span></div>
     <div class="hrow hhead"><span>Tarih</span><span>Uzman</span><span>Sinyal</span><span>Giriş</span><span>Şimdi/Çıkış</span><span>Sonuç</span></div>
     <div id="historyFeed">
-      <div class="hrow"><span style="color:var(--muted)">12 Şub</span><span>Willy Woo</span><span><span class="tag tag-buy" style="font-size:8px">AL BTC</span></span><span style="color:var(--muted)">$94,500</span><span>$99,200</span><span class="up">+4.97% ✓</span></div>
-      <div class="hrow"><span style="color:var(--muted)">12 Şub</span><span>Arthur Hayes</span><span><span class="tag tag-buy" style="font-size:8px">AL ETH</span></span><span style="color:var(--muted)">$2,610</span><span>$2,810</span><span class="up">+7.66% ✓</span></div>
-      <div class="hrow"><span style="color:var(--muted)">13 Şub</span><span>Lyn Alden</span><span><span class="tag tag-buy" style="font-size:8px">AL ALTIN</span></span><span style="color:var(--muted)">$2,870</span><span>$2,940</span><span class="up">+2.44% ✓</span></div>
-      <div class="hrow"><span style="color:var(--muted)">14 Şub</span><span>Raoul Pal</span><span><span class="tag tag-buy" style="font-size:8px">AL SOL</span></span><span style="color:var(--muted)">$188</span><span>$85</span><span class="dn">-54.8% ✗</span></div>
-      <div class="hrow"><span style="color:var(--muted)">15 Şub</span><span>Michael Burry</span><span><span class="tag tag-sell" style="font-size:8px">SAT NVDA</span></span><span style="color:var(--muted)">$132</span><span>$139</span><span class="dn">-5.3% ✗</span></div>
-      <div class="hrow"><span style="color:var(--muted)">15 Şub</span><span>Ki Young Ju</span><span><span class="tag tag-buy" style="font-size:8px">AL BTC</span></span><span style="color:var(--muted)">$95,800</span><span>$99,200</span><span class="up">+3.55% ✓</span></div>
-      <div class="hrow"><span style="color:var(--muted)">16 Şub</span><span>PlanB</span><span><span class="tag tag-buy" style="font-size:8px">AL BTC</span></span><span style="color:var(--muted)">$94,500</span><span>$99,200</span><span class="up">+4.97% ✓</span></div>
-      <div class="hrow"><span style="color:var(--muted)">17 Şub</span><span>Druckenmiller</span><span><span class="tag tag-buy" style="font-size:8px">AL ALTIN</span></span><span style="color:var(--muted)">$2,890</span><span>$2,940</span><span class="up">+1.73% ✓</span></div>
+      <div class="empty" style="padding:32px;text-align:center">
+        <div style="font-size:36px;margin-bottom:12px">📊</div>
+        <div style="font-size:15px;color:var(--text);font-weight:600;margin-bottom:10px">Henüz gerçek veri yok</div>
+        <div style="font-size:12px;color:var(--muted);line-height:2">
+          Sistem bugün başladı. Her sabah 09:00da sinyaller kaydediliyor.<br>
+          7 gün sonra ilk sonuçlar otomatik hesaplanacak.<br>
+          <span style="color:var(--accent);font-weight:600">Tahmini ilk sonuç: 25 Şubat 2026</span>
+        </div>
+      </div>
     </div>
     <div class="snote">✓ Doğru sinyal &nbsp;|&nbsp; ✗ Yanlış sinyal &nbsp;|&nbsp; Geçmiş performans gelecek getirileri garanti etmez. Her zaman stop-loss kullanın.</div>
   </div>
@@ -501,6 +502,58 @@ fetch('data.json?t='+Date.now())
   .catch(err=>{
     console.error('data.json yüklenemedi:',err);
     document.getElementById('signalsFeed').innerHTML='<div class="empty">⚠️ Veri bağlantısı kurulamadı.</div>';
+  });
+
+// HISTORY.JSON OKU
+fetch('history.json?t='+Date.now())
+  .then(r=>r.json())
+  .then(hist=>{
+    const signals = hist.signals || [];
+    const checked = signals.filter(s=>s.resultChecked);
+    const feed = document.getElementById('historyFeed');
+
+    if(checked.length === 0){
+      // Henuz sonuclanmis sinyal yok - bekliyor mesaji goster
+      const pending = signals.length;
+      feed.innerHTML = `<div class="empty" style="padding:32px;text-align:center">
+        <div style="font-size:36px;margin-bottom:12px">📊</div>
+        <div style="font-size:15px;color:var(--text);font-weight:600;margin-bottom:10px">Henüz sonuçlanan sinyal yok</div>
+        <div style="font-size:12px;color:var(--muted);line-height:2">
+          ${pending > 0 ? pending + " sinyal takipte — 7 gün sonra sonuçlar hesaplanacak.<br>" : ""}
+          Her sabah 09:00da yeni sinyaller kaydediliyor.<br>
+          <span style="color:var(--accent);font-weight:600">Sistem ${new Date().toLocaleDateString("tr-TR")} tarihinde başladı.</span>
+        </div>
+      </div>`;
+      return;
+    }
+
+    // Sonuçlanmis sinyalleri goster
+    const rows = checked.slice().reverse().map(s=>{
+      const d = new Date(s.date);
+      const tarih = d.toLocaleDateString("tr-TR",{day:"numeric",month:"short"});
+      const tagClass = s.type==="BULL"?"tag-buy":s.type==="BEAR"?"tag-sell":"tag-hold";
+      const typeLabel = s.type==="BULL"?"AL":s.type==="BEAR"?"SAT":"BEKLE";
+      const entryP = s.entryPrices?.[s.asset.toLowerCase()] || 0;
+      const entryStr = entryP ? "$"+Number(entryP).toLocaleString() : "—";
+      const exitStr = s.exitPrice ? "$"+Number(s.exitPrice).toLocaleString() : "—";
+      const pct = s.resultPct;
+      const pctStr = pct !== null ? (pct>=0?"+":"")+pct+"% "+(s.result==="CORRECT"?"✓":"✗") : "—";
+      const pctClass = s.result==="CORRECT"?"up":"dn";
+      return `<div class="hrow">
+        <span style="color:var(--muted)">${tarih}</span>
+        <span>${s.expert}</span>
+        <span><span class="tag ${tagClass}" style="font-size:9px">${typeLabel} ${s.asset}</span></span>
+        <span style="color:var(--muted)">${entryStr}</span>
+        <span>${exitStr}</span>
+        <span class="${pctClass}">${pctStr}</span>
+      </div>`;
+    }).join("");
+
+    feed.innerHTML = rows;
+  })
+  .catch(()=>{
+    // history.json yoksa sessizce gec
+    console.log("history.json henuz olusturulmamis");
   });
 </script>
 </body>
