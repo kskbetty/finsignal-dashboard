@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "19.02.2026 09:14:29",
+  "lastUpdate": "19.02.2026 09:23:05",
   "date": "19 Şubat 2026",
   "marketSentiment": "BULLISH",
   "sentimentScore": 72,
@@ -8,28 +8,28 @@
   "topRisk": "Küresel likidite belirsizliği.",
   "prices": {
     "btc": {
-      "price": 66995,
-      "change24h": -1.4904347378442686
+      "price": 66982,
+      "change24h": -1.75899228494545
     },
     "eth": {
-      "price": 1971.74,
-      "change24h": -2.2799892446166
+      "price": 1972.29,
+      "change24h": -2.297398800237
     },
     "sol": {
-      "price": 81.64,
-      "change24h": -4.431004728918953
+      "price": 81.67,
+      "change24h": -4.538865640575502
     },
     "xrp": {
       "price": 1.42,
-      "change24h": -4.709781350297049
+      "change24h": -4.497545605369593
     }
   },
   "trendingCoins": [
     "Optimism",
     "Pudgy Penguins",
     "Hyperliquid",
-    "Ethereum",
-    "Espresso"
+    "Espresso",
+    "Ethereum"
   ],
   "signals": [
     {
@@ -39,7 +39,7 @@
       "type": "BULL",
       "confidence": "High",
       "text": "On-chain metrikler güçlü",
-      "time": "09:14"
+      "time": "09:23"
     },
     {
       "id": 1,
@@ -48,7 +48,7 @@
       "type": "BULL",
       "confidence": "Med",
       "text": "Likidite koşulları olumlu",
-      "time": "09:14"
+      "time": "09:23"
     },
     {
       "id": 2,
@@ -57,7 +57,7 @@
       "type": "BULL",
       "confidence": "High",
       "text": "Model hedefi işaret ediyor",
-      "time": "09:14"
+      "time": "09:23"
     },
     {
       "id": 3,
@@ -66,7 +66,7 @@
       "type": "NEU",
       "confidence": "Low",
       "text": "Bekleme modunda",
-      "time": "09:14"
+      "time": "09:23"
     },
     {
       "id": 4,
@@ -75,7 +75,7 @@
       "type": "BULL",
       "confidence": "Med",
       "text": "Makro uyumlu",
-      "time": "09:14"
+      "time": "09:23"
     }
   ]
 }
