@@ -1,35 +1,35 @@
 {
-  "lastUpdate": "19.02.2026 09:39:29",
+  "lastUpdate": "19.02.2026 09:43:53",
   "date": "19 Şubat 2026",
   "marketSentiment": "BULLISH",
-  "sentimentScore": 72,
-  "summary": "Piyasa genel olarak nötr seyrediyor.",
-  "topOpportunity": "BTC güçlü destek üzerinde.",
-  "topRisk": "Küresel likidite belirsizliği.",
+  "sentimentScore": 65,
+  "summary": "Ekonomik dalgalanmalar ve kripto paralardaki hareketlilik, yatırımcılar için fırsatlar oluşturuyor.",
+  "topOpportunity": "Kripto paralar",
+  "topRisk": "Piyasa belirsizlikleri",
   "prices": {
     "btc": {
-      "price": 67054,
-      "change24h": -1.65487487450556
+      "price": 67027,
+      "change24h": -1.7157149197550448
     },
     "eth": {
-      "price": 1973.5,
-      "change24h": -2.319478036747682
+      "price": 1972.79,
+      "change24h": -2.373911642147155
     },
     "sol": {
-      "price": 81.79,
-      "change24h": -4.417335082692117
+      "price": 81.72,
+      "change24h": -4.473771657241064
     },
     "xrp": {
       "price": 1.42,
-      "change24h": -4.39713640968868
+      "change24h": -4.429530637336974
     }
   },
   "trendingCoins": [
     "Optimism",
     "Pudgy Penguins",
-    "Hyperliquid",
     "Espresso",
-    "Ethereum"
+    "Bittensor",
+    "Hyperliquid"
   ],
   "signals": [
     {
@@ -38,44 +38,89 @@
       "asset": "BTC",
       "type": "BULL",
       "confidence": "High",
-      "text": "On-chain metrikler güçlü",
-      "time": "09:39"
+      "text": "BTC’nin dip seviyelerde alım fırsatı sunduğu gözlemleniyor.",
+      "time": "09:43"
     },
     {
       "id": 1,
-      "expert": "Arthur Hayes",
-      "asset": "ETH",
+      "expert": "Islam Memis",
+      "asset": "THYAO",
       "type": "BULL",
       "confidence": "Med",
-      "text": "Likidite koşulları olumlu",
-      "time": "09:39"
+      "text": "THYAO, güçlü bir toparlanma potansiyeli barındırıyor.",
+      "time": "09:43"
     },
     {
       "id": 2,
-      "expert": "PlanB",
-      "asset": "BTC",
+      "expert": "Arthur Hayes",
+      "asset": "ETH",
       "type": "BULL",
       "confidence": "High",
-      "text": "Model hedefi işaret ediyor",
-      "time": "09:39"
+      "text": "ETH, yeni alım fırsatları sunmakta.",
+      "time": "09:43"
     },
     {
       "id": 3,
-      "expert": "Raoul Pal",
-      "asset": "SOL",
-      "type": "NEU",
-      "confidence": "Low",
-      "text": "Bekleme modunda",
-      "time": "09:39"
+      "expert": "Michael Saylor",
+      "asset": "BTC",
+      "type": "BULL",
+      "confidence": "Very High",
+      "text": "Bitcoin uzun vadede güvenli bir yatırım.",
+      "time": "09:43"
     },
     {
       "id": 4,
-      "expert": "Lyn Alden",
-      "asset": "XRP",
+      "expert": "PlanB",
+      "asset": "SOL",
       "type": "BULL",
       "confidence": "Med",
-      "text": "Makro uyumlu",
-      "time": "09:39"
+      "text": "SOL’un geri dönüş yapabileceği düşünülüyor.",
+      "time": "09:43"
+    },
+    {
+      "id": 5,
+      "expert": "Cathie Wood",
+      "asset": "XRP",
+      "type": "BULL",
+      "confidence": "High",
+      "text": "XRP, yükseliş potansiyeli taşıyor.",
+      "time": "09:43"
+    },
+    {
+      "id": 6,
+      "expert": "Haluk Burumcekci",
+      "asset": "GARAN",
+      "type": "BULL",
+      "confidence": "Med",
+      "text": "GARAN'da toparlanma işaretleri var.",
+      "time": "09:43"
+    },
+    {
+      "id": 7,
+      "expert": "Murat Muratoglu",
+      "asset": "ASELS",
+      "type": "BULL",
+      "confidence": "High",
+      "text": "ASELS için güçlü bir büyüme bekleniyor.",
+      "time": "09:43"
+    },
+    {
+      "id": 8,
+      "expert": "Stanley Druckenmiller",
+      "asset": "SPY",
+      "type": "BULL",
+      "confidence": "Med",
+      "text": "SPY için alım fırsatları göze çarpıyor.",
+      "time": "09:43"
+    },
+    {
+      "id": 9,
+      "expert": "Ray Dalio",
+      "asset": "QQQ",
+      "type": "BULL",
+      "confidence": "High",
+      "text": "Teknoloji hisselerinde bir devinim bekleniyor.",
+      "time": "09:43"
     }
   ]
 }
