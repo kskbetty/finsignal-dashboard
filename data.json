@@ -1,126 +1,126 @@
 {
-  "lastUpdate": "19.02.2026 09:43:53",
+  "lastUpdate": "19.02.2026 13:29:13",
   "date": "19 Şubat 2026",
-  "marketSentiment": "BULLISH",
-  "sentimentScore": 65,
-  "summary": "Ekonomik dalgalanmalar ve kripto paralardaki hareketlilik, yatırımcılar için fırsatlar oluşturuyor.",
-  "topOpportunity": "Kripto paralar",
-  "topRisk": "Piyasa belirsizlikleri",
+  "marketSentiment": "BEARISH",
+  "sentimentScore": 22,
+  "summary": "Piyasalarda genel bir belirsizlik hâkim. Düşüş trendleri ve olumsuz sinyaller gözlemleniyor. Seçimler dikkatle yapılmalı.",
+  "topOpportunity": "YKT",
+  "topRisk": "Gümüş fiyatları",
   "prices": {
     "btc": {
-      "price": 67027,
-      "change24h": -1.7157149197550448
+      "price": 66141,
+      "change24h": -1.9711764742331623
     },
     "eth": {
-      "price": 1972.79,
-      "change24h": -2.373911642147155
+      "price": 1932.61,
+      "change24h": -2.6917605887905
     },
     "sol": {
-      "price": 81.72,
-      "change24h": -4.473771657241064
+      "price": 80.38,
+      "change24h": -3.269060059486976
     },
     "xrp": {
-      "price": 1.42,
-      "change24h": -4.429530637336974
+      "price": 1.4,
+      "change24h": -4.357741606633909
     }
   },
   "trendingCoins": [
     "Optimism",
+    "Bitcoin",
     "Pudgy Penguins",
-    "Espresso",
-    "Bittensor",
-    "Hyperliquid"
+    "Hyperliquid",
+    "Arbitrum"
   ],
   "signals": [
     {
       "id": 0,
       "expert": "Willy Woo",
       "asset": "BTC",
-      "type": "BULL",
-      "confidence": "High",
-      "text": "BTC’nin dip seviyelerde alım fırsatı sunduğu gözlemleniyor.",
-      "time": "09:43"
+      "type": "BEKLE",
+      "confidence": "Yüksek",
+      "text": "BTC'de son fiyat hareketleri dikkatle izlenmeli. Fiyatın $65000 seviyesine kadar geri çekilmesi bekleniyor.",
+      "time": "13:29"
     },
     {
       "id": 1,
-      "expert": "Islam Memis",
-      "asset": "THYAO",
-      "type": "BULL",
-      "confidence": "Med",
-      "text": "THYAO, güçlü bir toparlanma potansiyeli barındırıyor.",
-      "time": "09:43"
+      "expert": "Arthur Hayes",
+      "asset": "ETH",
+      "type": "BEKLE",
+      "confidence": "Orta",
+      "text": "ETH'de şu an için bekleme stratejisi öneriliyor. $1900 seviyeleri önemli destek.",
+      "time": "13:29"
     },
     {
       "id": 2,
-      "expert": "Arthur Hayes",
-      "asset": "ETH",
-      "type": "BULL",
-      "confidence": "High",
-      "text": "ETH, yeni alım fırsatları sunmakta.",
-      "time": "09:43"
+      "expert": "Murat Muratoglu",
+      "asset": "THYAO",
+      "type": "SAT",
+      "confidence": "Orta",
+      "text": "THYAO'da mevcut düşüş trendinin devam edebileceği göz önünde bulundurulmalı.",
+      "time": "13:29"
     },
     {
       "id": 3,
-      "expert": "Michael Saylor",
-      "asset": "BTC",
-      "type": "BULL",
-      "confidence": "Very High",
-      "text": "Bitcoin uzun vadede güvenli bir yatırım.",
-      "time": "09:43"
+      "expert": "Michael Burry",
+      "asset": "PRY",
+      "type": "AL",
+      "confidence": "Düşük",
+      "text": "Para piyasalarında düşük riskle yatırım yapılabilir, bu durumda PRY tercih edilebilir.",
+      "time": "13:29"
     },
     {
       "id": 4,
-      "expert": "PlanB",
-      "asset": "SOL",
-      "type": "BULL",
-      "confidence": "Med",
-      "text": "SOL’un geri dönüş yapabileceği düşünülüyor.",
-      "time": "09:43"
+      "expert": "Haluk Burumcekci",
+      "asset": "YKT",
+      "type": "AL",
+      "confidence": "Yüksek",
+      "text": "Altın fiyatlarının artış gösterebileceği ve YKT'nin fayda sağlayabileceği öngörülüyor.",
+      "time": "13:29"
     },
     {
       "id": 5,
       "expert": "Cathie Wood",
-      "asset": "XRP",
-      "type": "BULL",
-      "confidence": "High",
-      "text": "XRP, yükseliş potansiyeli taşıyor.",
-      "time": "09:43"
+      "asset": "SOL",
+      "type": "BEKLE",
+      "confidence": "Orta",
+      "text": "SOL için dikkatli olunması gereken bir dönemdesiniz. Düşüş görünmese de dikkat edilmeli.",
+      "time": "13:29"
     },
     {
       "id": 6,
-      "expert": "Haluk Burumcekci",
-      "asset": "GARAN",
-      "type": "BULL",
-      "confidence": "Med",
-      "text": "GARAN'da toparlanma işaretleri var.",
-      "time": "09:43"
+      "expert": "Ray Dalio",
+      "asset": "YLB",
+      "type": "AL",
+      "confidence": "Düşük",
+      "text": "YLB para piyasasında düşük risk ile yatırım yapılması öneriliyor.",
+      "time": "13:29"
     },
     {
       "id": 7,
-      "expert": "Murat Muratoglu",
-      "asset": "ASELS",
-      "type": "BULL",
-      "confidence": "High",
-      "text": "ASELS için güçlü bir büyüme bekleniyor.",
-      "time": "09:43"
+      "expert": "Stanley Druckenmiller",
+      "asset": "YDZ",
+      "type": "BEKLE",
+      "confidence": "Düşük",
+      "text": "Döviz bazlı fonlarda belirsizlik sürüyor, dikkatli olunmalı.",
+      "time": "13:29"
     },
     {
       "id": 8,
-      "expert": "Stanley Druckenmiller",
-      "asset": "SPY",
-      "type": "BULL",
-      "confidence": "Med",
-      "text": "SPY için alım fırsatları göze çarpıyor.",
-      "time": "09:43"
+      "expert": "Islam Memis",
+      "asset": "YZG",
+      "type": "BEKLE",
+      "confidence": "Yüksek",
+      "text": "Gümüşte volatilitenin yüksek olması nedeniyle bekleme stratejisi önerilmektedir.",
+      "time": "13:29"
     },
     {
       "id": 9,
-      "expert": "Ray Dalio",
-      "asset": "QQQ",
-      "type": "BULL",
-      "confidence": "High",
-      "text": "Teknoloji hisselerinde bir devinim bekleniyor.",
-      "time": "09:43"
+      "expert": "Lyn Alden",
+      "asset": "TP2",
+      "type": "AL",
+      "confidence": "Yüksek",
+      "text": "TP2 ile güvenli bir para piyasası fonu olarak yatırım yapılabilir.",
+      "time": "13:29"
     }
   ]
 }
