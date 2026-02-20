@@ -1,48 +1,48 @@
 {
-  "lastUpdate": "19.02.2026 13:55:56",
-  "date": "19 Şubat 2026",
-  "marketSentiment": "BEARISH",
-  "sentimentScore": 20,
-  "summary": "Piyasa, düşüş eğiliminde ve dikkatli olunması gerekiyor. Beklemek ve doğru noktada giriş yapmak faydalı olabilir.",
-  "topOpportunity": "YLB ve YTD para piyasası fonları yatırım için uygun görünüyor.",
-  "topRisk": "XRP ve YZG riskli varlıklar, dikkatli olunmalı.",
+  "lastUpdate": "20.02.2026 06:39:05",
+  "date": "20 Şubat 2026",
+  "marketSentiment": "BULLISH",
+  "sentimentScore": 65,
+  "summary": "Piyasalarda belirsizlikler devam etse de, bazı varlıkların yükseliş potansiyeli görülmekte.",
+  "topOpportunity": "BTC ve YKT için pozitif sinyaller.",
+  "topRisk": "XRP'nin düşüş trendi.",
   "prices": {
     "btc": {
-      "price": 65887,
-      "change24h": -1.7953008359366756
+      "price": 67769,
+      "change24h": 0.9957026215605757
     },
     "eth": {
-      "price": 1920.65,
-      "change24h": -2.267959810326511
+      "price": 1953.83,
+      "change24h": -1.2917838491855504
     },
     "sol": {
-      "price": 79.83,
-      "change24h": -3.2894644689025623
+      "price": 83.38,
+      "change24h": 1.252537762168813
     },
     "xrp": {
-      "price": 1.39,
-      "change24h": -5.099096915177304
+      "price": 1.42,
+      "change24h": -0.4994835660004975
     }
   },
   "fearGreed": {
-    "value": 9,
+    "value": 7,
     "label": "Extreme Fear"
   },
   "bist": {
     "thyao": {
-      "price": 315,
+      "price": 312.5,
       "change": 0,
       "currency": "TRY",
       "symbol": "THYAO.IS"
     },
     "garan": {
-      "price": 155.9,
+      "price": 155.2,
       "change": 0,
       "currency": "TRY",
       "symbol": "GARAN.IS"
     },
     "asels": {
-      "price": 307.5,
+      "price": 307,
       "change": 0,
       "currency": "TRY",
       "symbol": "ASELS.IS"
@@ -55,106 +55,106 @@
     }
   },
   "stocks": {
-    "spx": 6881.31,
+    "spx": 6861.89,
     "spxChange": 0
   },
   "trendingCoins": [
-    "Optimism",
+    "Aztec",
+    "パンチ (Punch)",
     "Bitcoin",
-    "Pudgy Penguins",
-    "Hyperliquid",
-    "Solana"
+    "Optimism",
+    "Enso"
   ],
   "signals": [
     {
       "id": 0,
-      "expert": "Arthur Hayes",
+      "expert": "Willy Woo",
       "asset": "BTC",
-      "type": "BEAR",
+      "type": "BULL",
       "confidence": "High",
-      "text": "Bitcoin'in düşüşü devam ediyor. Kısa vadede riskler artabilir.",
-      "time": "13:55"
+      "text": "BTC'nin yükselişe geçtiği ve daha fazla potansiyel taşıdığı düşünülüyor. Giriş için uygun zaman.",
+      "time": "06:39"
     },
     {
       "id": 1,
-      "expert": "Michael Saylor",
-      "asset": "ETH",
-      "type": "BEAR",
-      "confidence": "Med",
-      "text": "Ethereum'un fiyatı düşüş trendinde. Beklemek daha mantıklı.",
-      "time": "13:55"
+      "expert": "Islam Memis",
+      "asset": "THYAO",
+      "type": "BULL",
+      "confidence": "Medium",
+      "text": "THYAO için olumlu bir hava mevcut, kısa vadeli yukarı hareket bekleniyor.",
+      "time": "06:39"
     },
     {
       "id": 2,
-      "expert": "Lyn Alden",
-      "asset": "SOL",
-      "type": "BEAR",
-      "confidence": "Low",
-      "text": "Solana'nın çıkışları zayıf görünüyor, dikkatli olunmalı.",
-      "time": "13:55"
+      "expert": "Arthur Hayes",
+      "asset": "ETH",
+      "type": "NEU",
+      "confidence": "Medium",
+      "text": "ETH, belirsiz görünümde. İzleme sürecine devam et.",
+      "time": "06:39"
     },
     {
       "id": 3,
-      "expert": "Howard Marks",
-      "asset": "XRP",
-      "type": "BEAR",
-      "confidence": "Med",
-      "text": "XRP'de düşüş bekleniyor, daha iyi fiyatlar için bekleyin.",
-      "time": "13:55"
+      "expert": "Ray Dalio",
+      "asset": "YKT",
+      "type": "BULL",
+      "confidence": "High",
+      "text": "Altın fiyatlarının artacağı öngörülüyor, bu nedenle YKT'ye yönelmek mantıklı.",
+      "time": "06:39"
     },
     {
       "id": 4,
-      "expert": "Warren Buffett",
-      "asset": "YKT",
-      "type": "NEU",
+      "expert": "Michael Saylor",
+      "asset": "XRP",
+      "type": "BEAR",
       "confidence": "High",
-      "text": "Altın fiyatları volatil ama şu an beklemek en iyisi.",
-      "time": "13:55"
+      "text": "XRP'deki düşüş trendi devam ediyor, dikkatli olunmalı.",
+      "time": "06:39"
     },
     {
       "id": 5,
-      "expert": "Murat Muratoglu",
+      "expert": "Howard Marks",
       "asset": "YLB",
       "type": "BULL",
-      "confidence": "Med",
-      "text": "Dövizde yaşanan belirsizlik nedeniyle, para piyasası fonları iyidir.",
-      "time": "13:55"
+      "confidence": "Medium",
+      "text": "Gelecek dönem için güvenli bir liman arayanlar için YLB uygun bir seçenek olabilir.",
+      "time": "06:39"
     },
     {
       "id": 6,
-      "expert": "Mohamed El-Erian",
-      "asset": "YTD",
-      "type": "BULL",
-      "confidence": "High",
-      "text": "Döviz bazlı fonlar, artan enflasyon karşısında iyi bir savunma.",
-      "time": "13:55"
+      "expert": "Stanley Druckenmiller",
+      "asset": "YZG",
+      "type": "NEU",
+      "confidence": "Low",
+      "text": "Gümüş için fiyat hareketleri dikkatli bir şekilde izlenmeli.",
+      "time": "06:39"
     },
     {
       "id": 7,
-      "expert": "Islam Memis",
-      "asset": "TP2",
+      "expert": "Lyn Alden",
+      "asset": "PRY",
       "type": "BULL",
       "confidence": "High",
-      "text": "Para piyasası fonları yüksek faiz ortamında güvenli bir seçenek.",
-      "time": "13:55"
+      "text": "PRY, kâr potansiyeli taşıyan bir fon olarak öne çıkıyor.",
+      "time": "06:39"
     },
     {
       "id": 8,
-      "expert": "Stanley Druckenmiller",
-      "asset": "PRY",
+      "expert": "Murat Muratoglu",
+      "asset": "SOL",
       "type": "BULL",
-      "confidence": "Med",
-      "text": "Yüksek faiz oranları, para piyasası fonlarına gitmemizi sağlıyor.",
-      "time": "13:55"
+      "confidence": "Medium",
+      "text": "SOL'un potansiyeli yüksek görünüyor.",
+      "time": "06:39"
     },
     {
       "id": 9,
-      "expert": "Cathie Wood",
-      "asset": "YZG",
-      "type": "BEAR",
-      "confidence": "Low",
-      "text": "Gümüş fonları şu an için dikkat gerektiriyor, tekrar düşünmekte fayda var.",
-      "time": "13:55"
+      "expert": "Michael Burry",
+      "asset": "TP2",
+      "type": "BULL",
+      "confidence": "Medium",
+      "text": "Düşük riskli fonlar arasında TP2, iyi bir getiri sunuyor.",
+      "time": "06:39"
     }
   ]
 }
