@@ -1,27 +1,27 @@
 {
-  "lastUpdate": "23.02.2026 07:00:25",
+  "lastUpdate": "23.02.2026 16:08:43",
   "date": "23 Şubat 2026",
   "marketSentiment": "BEARISH",
-  "sentimentScore": 30,
-  "summary": "Piyasalarda düşüş beklentisi ağır basıyor. Kripto para birimlerinde dikkatli olunmalı.",
-  "topOpportunity": "YLB fonu düşük risk sunuyor.",
-  "topRisk": "SOL ve gümüş fiyatları yüksek volatilite gösteriyor.",
+  "sentimentScore": 15,
+  "summary": "Piyasalarda genel olarak düşüş eğilimi var, dikkatli olunması gerekiyor.",
+  "topOpportunity": "Altın fonlarına dikkat edilebilir.",
+  "topRisk": "Kripto paralar yüksek risk taşıyor.",
   "prices": {
     "btc": {
-      "price": 65713,
-      "change24h": -3.4013497825549672
+      "price": 65371,
+      "change24h": -3.35080963391444
     },
     "eth": {
-      "price": 1878.82,
-      "change24h": -4.871897790779844
+      "price": 1885.78,
+      "change24h": -3.457815173460758
     },
     "sol": {
-      "price": 79.05,
-      "change24h": -7.277475541751453
+      "price": 79.11,
+      "change24h": -5.244896691420051
     },
     "xrp": {
       "price": 1.37,
-      "change24h": -3.918507716386948
+      "change24h": -1.7270816845568293
     }
   },
   "fearGreed": {
@@ -30,40 +30,40 @@
   },
   "bist": {
     "thyao": {
-      "price": 320.5,
+      "price": 315.75,
       "change": 0,
       "currency": "TRY",
       "symbol": "THYAO.IS"
     },
     "garan": {
-      "price": 157.7,
+      "price": 158.4,
       "change": 0,
       "currency": "TRY",
       "symbol": "GARAN.IS"
     },
     "asels": {
-      "price": 313.25,
+      "price": 310.5,
       "change": 0,
       "currency": "TRY",
       "symbol": "ASELS.IS"
     },
     "eregl": {
-      "price": 30.06,
+      "price": 31.48,
       "change": 0,
       "currency": "TRY",
       "symbol": "EREGL.IS"
     }
   },
   "stocks": {
-    "spx": 6909.51,
+    "spx": 6827.77,
     "spxChange": 0
   },
   "trendingCoins": [
+    "PEPETO",
+    "Hyperliquid",
+    "Espresso",
     "Bitcoin",
-    "パンチ (Punch)",
-    "pippin",
-    "Pudgy Penguins",
-    "Solana"
+    "USD1"
   ],
   "signals": [
     {
@@ -72,89 +72,89 @@
       "asset": "BTC",
       "type": "BEAR",
       "confidence": "High",
-      "text": "BTC fiyatı düşüş trendinde, dikkatli olun.",
-      "time": "07:00"
+      "text": "BTC fiyatları düşüş trendine girdi. Beklentiler olumsuz.",
+      "time": "16:08"
     },
     {
       "id": 1,
-      "expert": "Michael Saylor",
-      "asset": "ETH",
-      "type": "BEAR",
-      "confidence": "Med",
-      "text": "ETH'de düşüş devam edebilir, beklemek iyi olabilir.",
-      "time": "07:00"
+      "expert": "Warren Buffett",
+      "asset": "THYAO",
+      "type": "NEU",
+      "confidence": "Medium",
+      "text": "THYAO'da belirsizlik devam ediyor, dikkatli olunmalı.",
+      "time": "16:08"
     },
     {
       "id": 2,
-      "expert": "Ki Young Ju",
+      "expert": "Michael Burry",
       "asset": "SOL",
       "type": "BEAR",
       "confidence": "High",
-      "text": "SOL'da volatilite yüksek, dikkatli olunmalı.",
-      "time": "07:00"
+      "text": "SOL için sert bir düşüş bekleniyor.",
+      "time": "16:08"
     },
     {
       "id": 3,
-      "expert": "Ray Dalio",
-      "asset": "YKT",
-      "type": "NEU",
-      "confidence": "Med",
-      "text": "Döviz ve altın durumunu izlemek gerekebilir.",
-      "time": "07:00"
+      "expert": "Murat Muratoglu",
+      "asset": "GARAN",
+      "type": "BEAR",
+      "confidence": "Medium",
+      "text": "GARAN için riskler artıyor.",
+      "time": "16:08"
     },
     {
       "id": 4,
-      "expert": "Murat Muratoglu",
-      "asset": "YLB",
-      "type": "BULL",
-      "confidence": "Low",
-      "text": "Düşük risk, TL getiri almak için iyi bir seçenek.",
-      "time": "07:00"
+      "expert": "Ki Young Ju",
+      "asset": "ETH",
+      "type": "BEAR",
+      "confidence": "High",
+      "text": "ETH düşüş trendine girdi.",
+      "time": "16:08"
     },
     {
       "id": 5,
+      "expert": "Islam Memis",
+      "asset": "YKT",
+      "type": "NEU",
+      "confidence": "Medium",
+      "text": "Altın fiyatlarında belirsizlik var.",
+      "time": "16:08"
+    },
+    {
+      "id": 6,
+      "expert": "Cathie Wood",
+      "asset": "XRP",
+      "type": "BEAR",
+      "confidence": "Medium",
+      "text": "XRP'de düşüş bekleniyor.",
+      "time": "16:08"
+    },
+    {
+      "id": 7,
+      "expert": "Stanley Druckenmiller",
+      "asset": "IPE",
+      "type": "BEAR",
+      "confidence": "Medium",
+      "text": "Petrol fiyatlarında düşüş olası.",
+      "time": "16:08"
+    },
+    {
+      "id": 8,
+      "expert": "Ray Dalio",
+      "asset": "YLB",
+      "type": "NEU",
+      "confidence": "Medium",
+      "text": "Para piyasası fonlarına dikkatlice yaklaşılmalı.",
+      "time": "16:08"
+    },
+    {
+      "id": 9,
       "expert": "Haluk Burumcekci",
       "asset": "YZG",
       "type": "BEAR",
       "confidence": "High",
-      "text": "Gümüş fiyatları çok dalgalı, beklemek akıllıca olabilir.",
-      "time": "07:00"
-    },
-    {
-      "id": 6,
-      "expert": "Michael Burry",
-      "asset": "XRP",
-      "type": "BEAR",
-      "confidence": "Med",
-      "text": "XRP'de hareketler düşüşe işaret ediyor.",
-      "time": "07:00"
-    },
-    {
-      "id": 7,
-      "expert": "Cathie Wood",
-      "asset": "TP2",
-      "type": "BULL",
-      "confidence": "Med",
-      "text": "Para piyasası fonunda stabil getiri, iyi bir alternatif.",
-      "time": "07:00"
-    },
-    {
-      "id": 8,
-      "expert": "Warren Buffett",
-      "asset": "PRY",
-      "type": "BULL",
-      "confidence": "High",
-      "text": "PRY, güvenli bir yatırım olarak göz önünde bulundurulmalı.",
-      "time": "07:00"
-    },
-    {
-      "id": 9,
-      "expert": "Lyn Alden",
-      "asset": "EREGL",
-      "type": "BEAR",
-      "confidence": "High",
-      "text": "Hisse senedi piyasasında düşüş bekleniyor, dikkat edin.",
-      "time": "07:00"
+      "text": "Gümüş fiyatları yüksek volatilitede.",
+      "time": "16:08"
     }
   ]
 }
