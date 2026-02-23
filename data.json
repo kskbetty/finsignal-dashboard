@@ -1,27 +1,27 @@
 {
-  "lastUpdate": "23.02.2026 06:39:58",
+  "lastUpdate": "23.02.2026 06:42:20",
   "date": "23 Şubat 2026",
   "marketSentiment": "BEARISH",
-  "sentimentScore": 20,
-  "summary": "Kısa vadede piyasalarda belirsizlik ve düşüş beklentisi hakim. Riskleri göz önünde bulundurarak yatırım kararları alınmalı.",
-  "topOpportunity": "Para piyasası fonları",
-  "topRisk": "Kripto paralardaki dalgalanmalar",
+  "sentimentScore": 25,
+  "summary": "Piyasalarda genel olarak düşüş bekleniyor. Kripto paralarda belirsizlik var. Hisse senetleri için temkinli yaklaşmak en iyisi.",
+  "topOpportunity": "Kripto piyasasındaki belirsizlik ve dalgalanmalar.",
+  "topRisk": "Artan volatilite ve genel piyasa düşüşü.",
   "prices": {
     "btc": {
-      "price": 65593,
-      "change24h": -3.7066676754395607
+      "price": 65585,
+      "change24h": -3.608119713711813
     },
     "eth": {
-      "price": 1878.77,
-      "change24h": -5.008856007931311
+      "price": 1881.04,
+      "change24h": -4.789820802626908
     },
     "sol": {
-      "price": 78.66,
-      "change24h": -7.677962925524355
+      "price": 78.71,
+      "change24h": -7.630014321112795
     },
     "xrp": {
       "price": 1.36,
-      "change24h": -4.494399779967889
+      "change24h": -4.410426310514831
     }
   },
   "fearGreed": {
@@ -72,89 +72,107 @@
       "asset": "BTC",
       "type": "BEAR",
       "confidence": "High",
-      "text": "Bitcoin'da düşüş sürebilir. Teknik göstergeler negatif.",
-      "time": "06:39"
+      "text": "Bitcoin'ın şu anki durumu belirsiz görünüyor, düşüş devam edebilir.",
+      "time": "06:42"
     },
     {
       "id": 1,
-      "expert": "Michael Burry",
+      "expert": "Ki Young Ju",
       "asset": "ETH",
       "type": "BEAR",
       "confidence": "High",
-      "text": "Ethereum'da daha fazla gerileme olabilir. Dikkatli olun.",
-      "time": "06:39"
+      "text": "Ethereum'da kısa vadede satış presi bekleniyor.",
+      "time": "06:42"
     },
     {
       "id": 2,
-      "expert": "PlanB",
+      "expert": "Michael Saylor",
       "asset": "SOL",
       "type": "BEAR",
       "confidence": "Med",
-      "text": "Solana'da belirsizlik sürüyor, satış baskısı artabilir.",
-      "time": "06:39"
+      "text": "Solana'da düşüş trendi gözlemleniyor, dikkatli olun.",
+      "time": "06:42"
     },
     {
       "id": 3,
       "expert": "Cathie Wood",
       "asset": "XRP",
-      "type": "BEAR",
+      "type": "NEU",
       "confidence": "Med",
-      "text": "XRP için kısa vadede düşüş devam edebilir. Strateji değiştirin.",
-      "time": "06:39"
+      "text": "XRP için beklemede kalmalıyız, piyasa durumu belirsiz.",
+      "time": "06:42"
     },
     {
       "id": 4,
-      "expert": "Warren Buffett",
-      "asset": "YKT",
+      "expert": "Islam Memis",
+      "asset": "THYAO",
       "type": "NEU",
       "confidence": "Med",
-      "text": "Altın fiyatlarında belirsizlik olduğu için dikkatli olunmalı.",
-      "time": "06:39"
+      "text": "THYAO için mevcut piyasa koşullarında beklemede kalmak en iyisi.",
+      "time": "06:42"
     },
     {
       "id": 5,
-      "expert": "Haluk Burumcekci",
-      "asset": "YLG",
+      "expert": "Murat Muratoglu",
+      "asset": "GARAN",
       "type": "BEAR",
-      "confidence": "High",
-      "text": "Gümüş piyasasındaki düşüş devam edebilir. Riskleri göz önünde bulundurun.",
-      "time": "06:39"
+      "confidence": "Low",
+      "text": "GARAN'da düşüş gözlemleniyor, çıkış düşünülmeli.",
+      "time": "06:42"
     },
     {
       "id": 6,
-      "expert": "Ray Dalio",
-      "asset": "PRY",
-      "type": "NEU",
-      "confidence": "High",
-      "text": "Para piyasası fonları için beklemede kalmak akıllıca olabilir.",
-      "time": "06:39"
+      "expert": "Haluk Burumcekci",
+      "asset": "ASELS",
+      "type": "BEAR",
+      "confidence": "Low",
+      "text": "ASELS hisselerinde olumsuz bir trend var.",
+      "time": "06:42"
     },
     {
       "id": 7,
-      "expert": "Murat Muratoglu",
-      "asset": "TP2",
-      "type": "NEU",
-      "confidence": "High",
-      "text": "Faiz ortamında para piyasasında kalmak daha riskli olabilir.",
-      "time": "06:39"
+      "expert": "Warren Buffett",
+      "asset": "EREGL",
+      "type": "BEAR",
+      "confidence": "Low",
+      "text": "EREGL'de kısa vadede düşüş bekleniyor.",
+      "time": "06:42"
     },
     {
       "id": 8,
-      "expert": "Islam Memis",
-      "asset": "YTD",
+      "expert": "Ray Dalio",
+      "asset": "YKT",
       "type": "NEU",
       "confidence": "Med",
-      "text": "Döviz bazlı fonlar tercih edilmeli, dikkatli olun.",
-      "time": "06:39"
+      "text": "Döviz ve kıymetli metallerde belirsizlik devam ediyor.",
+      "time": "06:42"
     },
     {
       "id": 9,
       "expert": "Lyn Alden",
+      "asset": "YZG",
+      "type": "BEAR",
+      "confidence": "High",
+      "text": "Gümüş fiyatları düşüşü işaret ediyor.",
+      "time": "06:42"
+    },
+    {
+      "id": 10,
+      "expert": "Mohamed El-Erian",
       "asset": "YLB",
       "type": "NEU",
       "confidence": "Med",
-      "text": "Düşük riskli para piyasası fonlarında kalın, belirsizlik yüksek.",
-      "time": "06:39"
+      "text": "Para piyasaları dengesiz, beklemede kalınmalı.",
+      "time": "06:42"
+    },
+    {
+      "id": 11,
+      "expert": "Stanley Druckenmiller",
+      "asset": "PRY",
+      "type": "NEU",
+      "confidence": "Low",
+      "text": "PRY için beklemek mantıklı görünüyor.",
+      "time": "06:42"
     }
   ]
 }
