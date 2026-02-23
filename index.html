@@ -7,10 +7,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inconsolata:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg:#f0f4f8; --panel:#ffffff; --panel2:#f5f8fc;
-  --border:#d0dcea;
+  --bg:#ffffff; --panel:#fafcff; --panel2:#f0f5ff;
+  --border:#e2eaf5;
   --buy:#00a854; --sell:#e8192c; --hold:#d48800; --accent:#0078d4; --purple:#7b2ff7;
-  --text:#0f1f35; --muted:#6b8aaa; --muted2:#4a6a8a;
+  --text:#1a2b45; --muted:#8ba0bb; --muted2:#5a7a9a;
   --font:'Space Grotesk',sans-serif; --mono:'Inconsolata',monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -31,7 +31,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 
 /* TICKER */
-.ticker-wrap{background:#0f1f35;overflow:hidden;padding:7px 0}
+.ticker-wrap{background:#1e3a5f;overflow:hidden;padding:7px 0}
 .ticker-track{display:flex;gap:32px;animation:scroll 50s linear infinite;white-space:nowrap}
 @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .tick{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:12px}
