@@ -1,35 +1,35 @@
 {
-  "lastUpdate": "23.02.2026 16:54:17",
-  "date": "23 Şubat 2026",
+  "lastUpdate": "24.02.2026 07:00:23",
+  "date": "24 Şubat 2026",
   "marketSentiment": "BEARISH",
-  "sentimentScore": 20,
-  "summary": "Genel olarak piyasalarda düşüş gözlemleniyor. Uzun vadeli pozisyonlar için dikkatli olunmalı ve bazı fonlardan çıkış düşünülmeli.",
-  "topOpportunity": "TP2 fonu makul getiri sunuyor.",
-  "topRisk": "Kripto para piyasalarında devam eden düşüş.",
+  "sentimentScore": 15,
+  "summary": "Piyasalarda genel bir düşüş eğilimi gözlemleniyor. Özellikle kripto para birimlerinde satılması gereken pozisyonlar var.",
+  "topOpportunity": "TP2 fonu yüksek getiri potansiyeline sahip.",
+  "topRisk": "Kripto para birimlerinde sert düşüşler yaşanabilir.",
   "opportunities": [],
   "fonSignals": [],
   "watchlist": [],
   "etf": {},
   "prices": {
     "btc": {
-      "price": 65406,
-      "change24h": -3.2520063210068
+      "price": 63039,
+      "change24h": -4.126554154055059
     },
     "eth": {
-      "price": 1886.86,
-      "change24h": -3.289489469641233
+      "price": 1820.06,
+      "change24h": -3.1500160923663896
     },
     "sol": {
-      "price": 79.09,
-      "change24h": -5.189823662281878
+      "price": 76.66,
+      "change24h": -3.0130794389203115
     },
     "xrp": {
-      "price": 1.37,
-      "change24h": -1.5871750867975776
+      "price": 1.33,
+      "change24h": -2.727766032117584
     }
   },
   "fearGreed": {
-    "value": 5,
+    "value": 8,
     "label": "Extreme Fear"
   },
   "bist": {
@@ -59,28 +59,28 @@
     }
   },
   "stocks": {
-    "spx": 6840,
+    "spx": 6837.75,
     "spxChange": 0
   },
   "silver": {
-    "usd": 87.05,
+    "usd": 88.11,
     "change24h": 0,
-    "changeWeekly": 11.816168542679865,
-    "changeMonthly": -13.7478321332172,
+    "changeWeekly": 19.9640588375527,
+    "changeMonthly": -23.43587138649592,
     "changeYTD": 0
   },
   "trendingCoins": [
-    "PEPETO",
     "Espresso",
+    "Seeker",
     "Bitcoin",
-    "USD1",
-    "Hyperliquid"
+    "Flying Tulip",
+    "Ethereum"
   ],
   "portfolio": {
-    "data": "{\n  \"data\": \"{\\n  \\\"data\\\": \\\"{\\\\n  \\\\\\\"startDate\\\\\\\": \\\\\\\"2026-02-23\\\\\\\",\\\\n  \\\\\\\"totalDeposited\\\\\\\": 550,\\\\n  \\\\\\\"totalValue\\\\\\\": 550,\\\\n  \\\\\\\"totalReturn\\\\\\\": 0,\\\\n  \\\\\\\"monthlyReturn\\\\\\\": 0,\\\\n  \\\\\\\"cash\\\\\\\": {\\\\n    \\\\\\\"layer1\\\\\\\": 300,\\\\n    \\\\\\\"layer2\\\\\\\": 150,\\\\n    \\\\\\\"layer3\\\\\\\": 100\\\\n  },\\\\n  \\\\\\\"positions\\\\\\\": [],\\\\n  \\\\\\\"closedTrades\\\\\\\": [],\\\\n  \\\\\\\"agentReport\\\\\\\": \\\\\\\"Sistem bugün başlatıldı. İlk analiz yarın sabah 09:00'da üretilecek.\\\\\\\\n\\\\\\\\nKatman 1 ($300): TEFAS para piyasası fonlarına yönlendirilecek — TP2 veya PRY önerilir.\\\\\\\\nKatman 2 ($150): Altın ve BTC/ETH spot için beklemede.\\\\\\\\nKatman 3 ($100): Hacim anomalisi ve price action sinyali bekleniyor.\\\\\\\",\\\\n  \\\\\\\"lastUpdate\\\\\\\": \\\\\\\"\\\\\\\"\\\\n}\\\\n\\\"\\n}\"\n}",
+    "data": "{\n  \"data\": \"{\\n  \\\"data\\\": \\\"{\\\\n  \\\\\\\"data\\\\\\\": \\\\\\\"{\\\\\\\\n  \\\\\\\\\\\\\\\"startDate\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"2026-02-23\\\\\\\\\\\\\\\",\\\\\\\\n  \\\\\\\\\\\\\\\"totalDeposited\\\\\\\\\\\\\\\": 550,\\\\\\\\n  \\\\\\\\\\\\\\\"totalValue\\\\\\\\\\\\\\\": 550,\\\\\\\\n  \\\\\\\\\\\\\\\"totalReturn\\\\\\\\\\\\\\\": 0,\\\\\\\\n  \\\\\\\\\\\\\\\"monthlyReturn\\\\\\\\\\\\\\\": 0,\\\\\\\\n  \\\\\\\\\\\\\\\"cash\\\\\\\\\\\\\\\": {\\\\\\\\n    \\\\\\\\\\\\\\\"layer1\\\\\\\\\\\\\\\": 300,\\\\\\\\n    \\\\\\\\\\\\\\\"layer2\\\\\\\\\\\\\\\": 150,\\\\\\\\n    \\\\\\\\\\\\\\\"layer3\\\\\\\\\\\\\\\": 100\\\\\\\\n  },\\\\\\\\n  \\\\\\\\\\\\\\\"positions\\\\\\\\\\\\\\\": [],\\\\\\\\n  \\\\\\\\\\\\\\\"closedTrades\\\\\\\\\\\\\\\": [],\\\\\\\\n  \\\\\\\\\\\\\\\"agentReport\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"Sistem bugün başlatıldı. İlk analiz yarın sabah 09:00'da üretilecek.\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\nKatman 1 ($300): TEFAS para piyasası fonlarına yönlendirilecek — TP2 veya PRY önerilir.\\\\\\\\\\\\\\\\nKatman 2 ($150): Altın ve BTC/ETH spot için beklemede.\\\\\\\\\\\\\\\\nKatman 3 ($100): Hacim anomalisi ve price action sinyali bekleniyor.\\\\\\\\\\\\\\\",\\\\\\\\n  \\\\\\\\\\\\\\\"lastUpdate\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\"\\\\\\\\n}\\\\\\\\n\\\\\\\"\\\\n}\\\"\\n}\"\n}",
     "positions": [],
     "agentReport": "",
-    "lastUpdate": "2026-02-23T16:54:17.475Z"
+    "lastUpdate": "2026-02-24T07:00:23.746Z"
   },
   "signals": [
     {
@@ -89,8 +89,8 @@
       "asset": "BTC",
       "type": "BEAR",
       "confidence": "High",
-      "text": "Bitcoin fiyatındaki düşüş devam edebilir. Kısa vadede satılması önerilmektedir.",
-      "time": "16:54"
+      "text": "BTC fiyatında geri çekilme bekleniyor. Satış yapmayı düşünebilirsiniz.",
+      "time": "07:00"
     },
     {
       "id": 1,
@@ -98,80 +98,80 @@
       "asset": "ETH",
       "type": "BEAR",
       "confidence": "High",
-      "text": "Ethereum için düşüş trendi gözlemleniyor. Şu aşamada satış uygulanması tavsiye ediliyor.",
-      "time": "16:54"
+      "text": "ETH üzerinde baskı devam ediyor. Kısa pozisyon açmak mantıklı olabilir.",
+      "time": "07:00"
     },
     {
       "id": 2,
-      "expert": "Islam Memis",
-      "asset": "THYAO",
-      "type": "NEU",
+      "expert": "PlanB",
+      "asset": "SOL",
+      "type": "BEAR",
       "confidence": "Medium",
-      "text": "THYAO fiyatında düşüş görünmekte, ancak beklemede kalmak mantıklı olabilir.",
-      "time": "16:54"
+      "text": "SOL fiyatı için düşüş yönlü hareket bekleniyor. Daha düşük seviyelerde beklemek iyi olabilir.",
+      "time": "07:00"
     },
     {
       "id": 3,
       "expert": "Murat Muratoglu",
-      "asset": "GARAN",
-      "type": "BEAR",
+      "asset": "THYAO",
+      "type": "NEU",
       "confidence": "Medium",
-      "text": "GARAN için satış önerilmektedir, zayıf performans devam edebilir.",
-      "time": "16:54"
+      "text": "THYAO’da bekle gör stratejisi öneriliyor. Fiyat dengesizliği mevcut.",
+      "time": "07:00"
     },
     {
       "id": 4,
       "expert": "Haluk Burumcekci",
-      "asset": "ASELS",
+      "asset": "GARAN",
       "type": "BEAR",
       "confidence": "Medium",
-      "text": "ASELS hisse senetlerinde düşüş gözlemlenmektedir, çıkış yapılması öneriliyor.",
-      "time": "16:54"
+      "text": "GARAN’da kısa vadede geri çekilmeler olabilir. Satış düşünülmeli.",
+      "time": "07:00"
     },
     {
       "id": 5,
       "expert": "Michael Saylor",
-      "asset": "XRP",
+      "asset": "YKT",
       "type": "BEAR",
       "confidence": "Low",
-      "text": "XRP fiyatındaki dalgalanma nedeniyle satış yönünde karar alınması tavsiye edilir.",
-      "time": "16:54"
+      "text": "Altın fiyatında düşüşler bekleniyor. YKT'den çıkış düşünülebilir.",
+      "time": "07:00"
     },
     {
       "id": 6,
       "expert": "Cathie Wood",
-      "asset": "YKT",
-      "type": "NEU",
-      "confidence": "Medium",
-      "text": "Altın fiyatları dalgalı, YKT'yi izlemek iyi olabilir ama hemen alım yapmamak daha uygun.",
-      "time": "16:54"
+      "asset": "YZG",
+      "type": "BEAR",
+      "confidence": "High",
+      "text": "Gümüş fiyatlarının düşmesi bekleniyor. YZG fonu ile dikkatli olunmalı.",
+      "time": "07:00"
     },
     {
       "id": 7,
       "expert": "Ray Dalio",
-      "asset": "YZG",
-      "type": "BEAR",
+      "asset": "PRY",
+      "type": "NEU",
       "confidence": "Medium",
-      "text": "Yüksek volatiliteden dolayı Gümüş fonlarında dikkatli olunması gerektiği düşünülmektedir.",
-      "time": "16:54"
+      "text": "PRY fonu için beklemekte fayda var, getiri durumu gözlemleniyor.",
+      "time": "07:00"
     },
     {
       "id": 8,
       "expert": "Warren Buffett",
       "asset": "TP2",
-      "type": "NEU",
-      "confidence": "Low",
-      "text": "Para piyasası fonlarında kalmak en mantıklısı, getiri şu anda makul görünüyor.",
-      "time": "16:54"
+      "type": "BULL",
+      "confidence": "Medium",
+      "text": "Yüksek faiz ortamı para piyasası fonlarına yönelmeyi öneriyor. TP2 olumlu.",
+      "time": "07:00"
     },
     {
       "id": 9,
-      "expert": "Lyn Alden",
-      "asset": "PRY",
-      "type": "NEU",
+      "expert": "Stanley Druckenmiller",
+      "asset": "XRP",
+      "type": "BEAR",
       "confidence": "Medium",
-      "text": "PRY fonunda beklemede kalınması tavsiye edilmektedir, getirisi tatmin edici.",
-      "time": "16:54"
+      "text": "XRP fiyatının aşağı yönlü devam etmesi bekleniyor. Pozisyon kapatılabilir.",
+      "time": "07:00"
     }
   ]
 }
