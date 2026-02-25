@@ -59,6 +59,43 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
 @media(max-width:1100px){.gmain{grid-template-columns:1fr}.g4{grid-template-columns:1fr 1fr}.g5{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.g2,.g3,.g4,.g5{grid-template-columns:1fr}}
 
+/* MOBILE */
+@media(max-width:600px){
+  .wrap{padding:0 12px}
+  .header{padding:10px 14px;flex-wrap:wrap;gap:8px}
+  .hstats{display:none}
+  .logo-sub{display:none}
+  .tabs{padding:10px 12px 0;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{padding:8px 14px;font-size:12px;white-space:nowrap;flex-shrink:0}
+  .top3{grid-template-columns:1fr}
+  .g5{grid-template-columns:1fr 1fr}
+  .gmain{grid-template-columns:1fr}
+  .pos-row{grid-template-columns:60px 1fr 70px 70px;font-size:11px;padding:10px 12px}
+  .pos-row span:last-child{display:none}
+  .pos-head span:last-child{display:none}
+  .hrow{grid-template-columns:55px 80px 1fr 70px 70px;font-size:10px;padding:8px 12px}
+  .hrow span:nth-child(6),.hrow span:nth-child(7){display:none}
+  .hhead span:nth-child(6),.hhead span:nth-child(7){display:none}
+  .port-total-val{font-size:30px}
+  .port-layers{grid-template-columns:1fr}
+  .port-layer{border-right:none;border-bottom:1px solid var(--border);padding:12px}
+  .port-layer:last-child{border-bottom:none}
+  .kpi-val{font-size:22px}
+  .bist-price{font-size:16px}
+  .top-card-asset{font-size:20px}
+  .opp-targets{flex-wrap:wrap}
+  .snote{font-size:10px;padding:8px 12px}
+  .chead{padding:10px 12px}
+  .kpi{padding:12px 14px}
+  .fon-grid{grid-template-columns:1fr 1fr}
+  .watch-row{flex-wrap:wrap;gap:8px}
+  /* Gümüş kartı mobil */
+  .gumus-grid{grid-template-columns:1fr !important}
+  /* Kripto grid mobil */
+  .kripto-grid{grid-template-columns:1fr 1fr !important}
+}
+
 /* CARD */
 .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.04)}
 .chead{padding:12px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--panel2)}
@@ -208,6 +245,36 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
     <div class="live"><span class="dot"></span><span id="updateTime">Yükleniyor</span></div>
   </div>
 </div>
+
+<!-- MOBILE MINI TICKER (sadece telefonda görünür) -->
+<div style="display:none" id="mobileTicker" class="mobile-ticker-bar">
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;display:flex;gap:16px;padding:8px 14px;background:var(--panel);border-bottom:1px solid var(--border)">
+    <div style="display:flex;gap:6px;align-items:center;flex-shrink:0;font-family:var(--mono);font-size:12px">
+      <span style="color:var(--muted);font-size:10px">BTC</span><span id="mBTC" style="font-weight:700">—</span>
+    </div>
+    <div style="display:flex;gap:6px;align-items:center;flex-shrink:0;font-family:var(--mono);font-size:12px">
+      <span style="color:var(--muted);font-size:10px">ETH</span><span id="mETH" style="font-weight:700">—</span>
+    </div>
+    <div style="display:flex;gap:6px;align-items:center;flex-shrink:0;font-family:var(--mono);font-size:12px">
+      <span style="color:var(--muted);font-size:10px">SOL</span><span id="mSOL" style="font-weight:700">—</span>
+    </div>
+    <div style="display:flex;gap:6px;align-items:center;flex-shrink:0;font-family:var(--mono);font-size:12px">
+      <span style="color:var(--muted);font-size:10px">F&G</span><span id="mFNG" style="font-weight:700">—</span>
+    </div>
+    <div style="display:flex;gap:6px;align-items:center;flex-shrink:0;font-family:var(--mono);font-size:12px">
+      <span style="color:var(--muted);font-size:10px">THYAO</span><span id="mTHYAO" style="font-weight:700">—</span>
+    </div>
+    <div style="display:flex;gap:6px;align-items:center;flex-shrink:0;font-family:var(--mono);font-size:12px">
+      <span style="color:var(--muted);font-size:10px">GÜMÜŞ</span><span id="mSilver" style="font-weight:700">—</span>
+    </div>
+  </div>
+</div>
+<style>
+@media(max-width:600px){
+  #mobileTicker{display:block !important}
+  #mobileTicker::-webkit-scrollbar{display:none}
+}
+</style>
 
 <!-- TICKER -->
 <div class="ticker-wrap">
@@ -438,7 +505,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
   <!-- Kripto fiyatları -->
   <div class="card">
     <div class="chead"><span class="ctitle">₿ Kripto Piyasası</span><span class="cbadge">CoinGecko</span></div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr)">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr)" class="kripto-grid">
       <div style="padding:16px 20px;border-right:1px solid var(--border)">
         <div style="font-size:11px;color:var(--muted);font-family:var(--mono);margin-bottom:4px">BITCOIN</div>
         <div style="font-size:22px;font-weight:700;font-family:var(--mono)" id="cBTC">—</div>
@@ -465,9 +532,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
   <!-- Gümüş & Altın -->
   <div class="card" style="margin-top:14px">
     <div class="chead"><span class="ctitle">🥈 Gümüş & Altın Takibi</span><span class="cbadge">Yahoo Finance</span></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr">
-
-      <!-- GÜMÜŞ USD -->
+    <div style="display:grid;grid-template-columns:1fr 1fr" class="gumus-grid">
       <div style="padding:20px 24px;border-right:1px solid var(--border)">
         <div style="font-size:10px;color:var(--muted);font-family:var(--mono);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">GÜMÜŞ — Dünya (USD/oz)</div>
         <div style="display:flex;align-items:flex-end;gap:12px;margin-bottom:10px">
@@ -708,6 +773,20 @@ fetch('data.json?t='+Date.now())
       hs.textContent = '$'+Number(data.silver.usd).toFixed(2);
       hs.className = 'hstat-val '+(data.silver.change24h>=0?'up':'dn');
     }
+
+    // Mobil mini ticker
+    const mb = document.getElementById('mBTC');
+    const me = document.getElementById('mETH');
+    const ms = document.getElementById('mSOL');
+    const mf = document.getElementById('mFNG');
+    const mt = document.getElementById('mTHYAO');
+    const msil = document.getElementById('mSilver');
+    if(mb) { mb.textContent='$'+Number(p.btc?.price||0).toLocaleString(); mb.className=(p.btc?.change24h>=0?'up':'dn'); }
+    if(me) { me.textContent='$'+Number(p.eth?.price||0).toLocaleString(); me.className=(p.eth?.change24h>=0?'up':'dn'); }
+    if(ms) { ms.textContent='$'+Number(p.sol?.price||0).toFixed(2); ms.className=(p.sol?.change24h>=0?'up':'dn'); }
+    if(mf && data.fearGreed) { mf.textContent=data.fearGreed.value+'/100'; mf.style.color=getFGColor(data.fearGreed.value); }
+    if(mt && data.bist?.thyao) { mt.textContent=Number(data.bist.thyao.price).toFixed(2)+'₺'; mt.className=(data.bist.thyao.change>=0?'up':'dn'); }
+    if(msil && data.silver?.usd) { msil.textContent='$'+Number(data.silver.usd).toFixed(2); msil.className=(data.silver.change24h>=0?'up':'dn'); }
 
     // Gümüş kartı (Piyasa sekmesi)
     if(data.silver) {
