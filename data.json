@@ -1,11 +1,11 @@
 {
-  "lastUpdate": "25.02.2026 07:13:28",
+  "lastUpdate": "25.02.2026 13:00:13",
   "date": "25 Şubat 2026",
   "marketSentiment": "BULLISH",
-  "sentimentScore": 82,
-  "summary": "Piyasalarda aşırı korku durumu gözlemleniyor. Kripto paralar için olumlu beklentiler artmakta.",
-  "topOpportunity": "Bitcoin'de güçlü hacim anomalisi ve yükseliş trendi görülmekte.",
-  "topRisk": "Piyasalardaki aşırı korku ve olası düşük hacim risk oluşturuyor.",
+  "sentimentScore": 88,
+  "summary": "Piyasalarda aşırı korku durumu gözlemleniyor. BTC'de hacim anomalisi ve fiyat artışı dikkat çekiyor.",
+  "topOpportunity": "Bitcoin (BTC) için hacim anomalisinden dolayı yükseliş fırsatı mevcut.",
+  "topRisk": "Aşırı korku durumu piyasalarda dalgalanmalara yol açabilir.",
   "opportunities": [
     {
       "rank": 1,
@@ -13,7 +13,7 @@
       "score": 8,
       "type": "BULL",
       "pattern": "VOLUME_ANOMALY",
-      "text": "Bitcoin, son dönemde hacim anomalileri ile desteklenen güçlü bir yükseliş trendi içerisinde. Bu durum yatırımlar için olumlu bir sinyal oluşturuyor.",
+      "text": "Bitcoin'de son zamanlarda önemli bir hacim artışı gözlemleniyor ve fiyat 24 saat içinde %4.73 oranında yükseldi. Bu durum, daha fazla alım için potansiyel bir fırsat sunuyor.",
       "entry": "$65000",
       "target": "$72000",
       "stopLoss": "$61000",
@@ -27,34 +27,34 @@
   "fonSignals": [
     {
       "asset": "YKT",
-      "action": "AL",
-      "text": "YKT'deki potansiyel büyüme, mevcut fiyat seviyelerinden alış yapmayı teşvik ediyor."
+      "action": "BEKLE",
+      "text": "Hacim ve fiyat hareketleri daha net bir sinyal vermediği için beklemek daha mantıklı."
     }
   ],
   "watchlist": [
     {
       "asset": "SOL",
-      "reason": "Compression pattern — henüz breakout vermedi",
+      "reason": "Compression pattern — henüz breakout vermedi.",
       "triggerLevel": "$85"
     }
   ],
   "etf": {},
   "prices": {
     "btc": {
-      "price": 64984,
-      "change24h": 2.7538393990602725
+      "price": 66032,
+      "change24h": 4.731312797462426
     },
     "eth": {
-      "price": 1888.31,
-      "change24h": 3.370198166997003
+      "price": 1950.89,
+      "change24h": 6.966684846936366
     },
     "sol": {
-      "price": 81.7,
-      "change24h": 6.432192157630586
+      "price": 83.67,
+      "change24h": 9.202598827509147
     },
     "xrp": {
-      "price": 1.36,
-      "change24h": 2.586639005043136
+      "price": 1.4,
+      "change24h": 4.964106740714632
     }
   },
   "fearGreed": {
@@ -63,25 +63,25 @@
   },
   "bist": {
     "thyao": {
-      "price": 309.25,
+      "price": 307,
       "change": 0,
       "currency": "TRY",
       "symbol": "THYAO.IS"
     },
     "garan": {
-      "price": 160.1,
+      "price": 158.6,
       "change": 0,
       "currency": "TRY",
       "symbol": "GARAN.IS"
     },
     "asels": {
-      "price": 309.75,
+      "price": 308.5,
       "change": 0,
       "currency": "TRY",
       "symbol": "ASELS.IS"
     },
     "eregl": {
-      "price": 32.04,
+      "price": 31.12,
       "change": 0,
       "currency": "TRY",
       "symbol": "EREGL.IS"
@@ -92,48 +92,24 @@
     "spxChange": 0
   },
   "silver": {
-    "usd": 90.425,
+    "usd": 91.11,
     "change24h": 0,
-    "changeWeekly": 16.66387118746838,
-    "changeMonthly": -21.424225223329504,
+    "changeWeekly": 17.547636343591954,
+    "changeMonthly": -20.828989259048434,
     "changeYTD": 0
   },
   "trendingCoins": [
     "Bitcoin",
     "Pudgy Penguins",
-    "Espresso",
-    "Flying Tulip",
-    "Solana"
+    "Morpho",
+    "Dent",
+    "Virtuals Protocol"
   ],
   "portfolio": {
-    "startDate": "2026-02-25",
-    "totalDeposited": 550,
-    "totalValue": 550,
-    "totalReturn": 0,
-    "monthlyReturn": 0,
-    "cash": {
-      "layer1": 300,
-      "layer2": 150,
-      "layer3": 50
-    },
-    "positions": [
-      {
-        "asset": "BTC",
-        "entryPrice": 65000,
-        "currentPrice": 65000,
-        "target": "$72000",
-        "stopLoss": "$61000",
-        "amount": 50,
-        "layer": 3,
-        "openDate": "2026-02-25T07:13:28.353Z",
-        "pattern": "VOLUME_ANOMALY",
-        "pnlPct": 0,
-        "pnlUSD": 0
-      }
-    ],
-    "closedTrades": [],
-    "agentReport": "Portföyde mevcut durumda toplam 550$ değerinde yatırım bulunuyor. Tüm yatırımlar nakit olarak tahsis edilmiş, herhangi bir pozisyon açılmamış. Bitcoin ve diğer ana kripto paralardaki gelişmeler izlenmeli.",
-    "lastUpdate": "2026-02-25T07:13:28.353Z"
+    "data": "{\n  \"startDate\": \"2026-02-25\",\n  \"totalDeposited\": 550,\n  \"totalValue\": 550,\n  \"totalReturn\": 0,\n  \"monthlyReturn\": 0,\n  \"cash\": {\n    \"layer1\": 300,\n    \"layer2\": 150,\n    \"layer3\": 100\n  },\n  \"positions\": [],\n  \"closedTrades\": [],\n  \"agentReport\": \"\",\n  \"lastUpdate\": \"2026-02-25T07:13:29.556Z\"\n}",
+    "positions": [],
+    "agentReport": "Portföyünüzde toplam 550$ bulunmakta. Hacim artışı gösteren varlıklar üzerine daha fazla odaklanabilirsiniz. Ayrıca, risk yönetimi açısından stop-loss kullanmanızı öneririm.",
+    "lastUpdate": "2026-02-25T13:00:13.893Z"
   },
   "signals": []
 }
