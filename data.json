@@ -1,11 +1,11 @@
 {
-  "lastUpdate": "25.02.2026 07:08:29",
+  "lastUpdate": "25.02.2026 07:13:28",
   "date": "25 Şubat 2026",
-  "marketSentiment": "BEARISH",
-  "sentimentScore": 15,
-  "summary": "Piyasalarda aşırı bir korku durumu gözlemleniyor. Bu ortam, yatırımcıların temkinli yaklaşmasına neden olabilir.",
-  "topOpportunity": "Bitcoin'de güçlü bir hacim anomalisine rastlanıyor, bu durum alım fırsatı sunabilir.",
-  "topRisk": "Piyasa genelinde düşüş eğilimi devam ediyor ve bu riskleri arttırıyor.",
+  "marketSentiment": "BULLISH",
+  "sentimentScore": 82,
+  "summary": "Piyasalarda aşırı korku durumu gözlemleniyor. Kripto paralar için olumlu beklentiler artmakta.",
+  "topOpportunity": "Bitcoin'de güçlü hacim anomalisi ve yükseliş trendi görülmekte.",
+  "topRisk": "Piyasalardaki aşırı korku ve olası düşük hacim risk oluşturuyor.",
   "opportunities": [
     {
       "rank": 1,
@@ -13,7 +13,7 @@
       "score": 8,
       "type": "BULL",
       "pattern": "VOLUME_ANOMALY",
-      "text": "Bitcoin'de yüksek hacim ve fiyat hareketliliği dikkat çekiyor. Yatırımcılar için bu, potansiyel bir alım fırsatı oluşturuyor.",
+      "text": "Bitcoin, son dönemde hacim anomalileri ile desteklenen güçlü bir yükseliş trendi içerisinde. Bu durum yatırımlar için olumlu bir sinyal oluşturuyor.",
       "entry": "$65000",
       "target": "$72000",
       "stopLoss": "$61000",
@@ -28,7 +28,7 @@
     {
       "asset": "YKT",
       "action": "AL",
-      "text": "Yüksek hacim gösteren YKT'de alım yapılması öneriliyor."
+      "text": "YKT'deki potansiyel büyüme, mevcut fiyat seviyelerinden alış yapmayı teşvik ediyor."
     }
   ],
   "watchlist": [
@@ -41,20 +41,20 @@
   "etf": {},
   "prices": {
     "btc": {
-      "price": 64838,
-      "change24h": 2.5228004770871375
+      "price": 64984,
+      "change24h": 2.7538393990602725
     },
     "eth": {
-      "price": 1884.24,
-      "change24h": 3.1472719557613638
+      "price": 1888.31,
+      "change24h": 3.370198166997003
     },
     "sol": {
-      "price": 81.57,
-      "change24h": 6.4942058728929775
+      "price": 81.7,
+      "change24h": 6.432192157630586
     },
     "xrp": {
       "price": 1.36,
-      "change24h": 2.3903922908489528
+      "change24h": 2.586639005043136
     }
   },
   "fearGreed": {
@@ -63,25 +63,25 @@
   },
   "bist": {
     "thyao": {
-      "price": 308.5,
+      "price": 309.25,
       "change": 0,
       "currency": "TRY",
       "symbol": "THYAO.IS"
     },
     "garan": {
-      "price": 159.5,
+      "price": 160.1,
       "change": 0,
       "currency": "TRY",
       "symbol": "GARAN.IS"
     },
     "asels": {
-      "price": 309,
+      "price": 309.75,
       "change": 0,
       "currency": "TRY",
       "symbol": "ASELS.IS"
     },
     "eregl": {
-      "price": 31.98,
+      "price": 32.04,
       "change": 0,
       "currency": "TRY",
       "symbol": "EREGL.IS"
@@ -92,10 +92,10 @@
     "spxChange": 0
   },
   "silver": {
-    "usd": 90.46,
+    "usd": 90.425,
     "change24h": 0,
-    "changeWeekly": 16.709022113815376,
-    "changeMonthly": -21.393815045924207,
+    "changeWeekly": 16.66387118746838,
+    "changeMonthly": -21.424225223329504,
     "changeYTD": 0
   },
   "trendingCoins": [
@@ -125,13 +125,15 @@
         "stopLoss": "$61000",
         "amount": 50,
         "layer": 3,
-        "openDate": "2026-02-25T07:08:29.641Z",
-        "pattern": "VOLUME_ANOMALY"
+        "openDate": "2026-02-25T07:13:28.353Z",
+        "pattern": "VOLUME_ANOMALY",
+        "pnlPct": 0,
+        "pnlUSD": 0
       }
     ],
     "closedTrades": [],
-    "agentReport": "Portföyünüzde toplamda 550 dolar bulunuyor. Mevcut durumda nakit ağırlığınız yüksek ve yatırım yapacağınız varlıklar arasında dikkatli seçiminiz önemli. Bitcoin'e yönelmek için doğru anı beklemekte fayda var.",
-    "lastUpdate": "2026-02-25T07:08:29.641Z"
+    "agentReport": "Portföyde mevcut durumda toplam 550$ değerinde yatırım bulunuyor. Tüm yatırımlar nakit olarak tahsis edilmiş, herhangi bir pozisyon açılmamış. Bitcoin ve diğer ana kripto paralardaki gelişmeler izlenmeli.",
+    "lastUpdate": "2026-02-25T07:13:28.353Z"
   },
   "signals": []
 }
