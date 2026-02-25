@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "25.02.2026 07:03:51",
+  "lastUpdate": "25.02.2026 07:06:02",
   "date": "25 Şubat 2026",
   "marketSentiment": "BEARISH",
   "sentimentScore": 15,
@@ -119,13 +119,13 @@
         "stopLoss": "$61000",
         "amount": 50,
         "layer": 3,
-        "openDate": "2026-02-25T07:03:51.598Z",
+        "openDate": "2026-02-25T07:06:02.208Z",
         "pattern": "VOLUME_ANOMALY"
       }
     ],
     "closedTrades": [],
     "agentReport": "Portföyünüzde $300'lik TEFAS para piyasası fonu önerdim. Ek olarak, $150'lik yatırımınız için BTC ve ETH üzerinde durulması öneriliyor. Hacim anomalileri incelenmeli.",
-    "lastUpdate": "2026-02-25T07:03:51.598Z"
+    "lastUpdate": "2026-02-25T07:06:02.208Z"
   },
   "signals": []
 }
