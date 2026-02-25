@@ -1,11 +1,11 @@
 {
-  "lastUpdate": "25.02.2026 07:06:02",
+  "lastUpdate": "25.02.2026 07:06:27",
   "date": "25 Şubat 2026",
-  "marketSentiment": "BEARISH",
-  "sentimentScore": 15,
-  "summary": "Piyasalarda aşırı korku var, bu durum yatırımcıların riskten kaçınmasına sebep oluyor. Kısa vadede volatilite artabilir.",
-  "topOpportunity": "BTC'de hacim anomalisi gözlemleniyor.",
-  "topRisk": "Piyasa belirsizliği nedeniyle riskler artabilir.",
+  "marketSentiment": "BULLISH",
+  "sentimentScore": 82,
+  "summary": "Piyasa genelinde büyük bir korku hissi var, bu da fırsatlar yaratabilir. Bitcoin, son dönemde hacim anomalileri gösteriyor ve bu durumdaki hareketler dikkat çekici.",
+  "topOpportunity": "Bitcoin'de güçlü bir hacim anomali gözlemleniyor.",
+  "topRisk": "Volatil altcoinlerde stop-loss uygulanması gerekiyor.",
   "opportunities": [
     {
       "rank": 1,
@@ -13,7 +13,7 @@
       "score": 8,
       "type": "BULL",
       "pattern": "VOLUME_ANOMALY",
-      "text": "BTC'de artan hacim, yukarı yönlü hareket için fırsat sunuyor. Destek seviyesi olarak belirlenen $61000 önemlidir.",
+      "text": "Bitcoin, son 24 saatte %2.58'lik bir artış göstererek hacim anomali yarattı. Bu durum, kısa vadeli bir alım fırsatı sunuyor.",
       "entry": "$65000",
       "target": "$72000",
       "stopLoss": "$61000",
@@ -24,7 +24,13 @@
       "confidence": "HIGH"
     }
   ],
-  "fonSignals": [],
+  "fonSignals": [
+    {
+      "asset": "YKT",
+      "action": "BEKLE",
+      "text": "Piyasa koşulları netleşene kadar beklemek daha mantıklı görünüyor."
+    }
+  ],
   "watchlist": [
     {
       "asset": "SOL",
@@ -35,20 +41,20 @@
   "etf": {},
   "prices": {
     "btc": {
-      "price": 64895,
-      "change24h": 2.938580117091071
+      "price": 64875,
+      "change24h": 2.5822933473040823
     },
     "eth": {
-      "price": 1885.97,
-      "change24h": 3.6732623837291034
+      "price": 1885.6,
+      "change24h": 3.222123557655242
     },
     "sol": {
       "price": 81.55,
-      "change24h": 6.47636593415515
+      "change24h": 6.466820318057049
     },
     "xrp": {
       "price": 1.36,
-      "change24h": 2.40862341744653
+      "change24h": 2.380593053180765
     }
   },
   "fearGreed": {
@@ -86,10 +92,10 @@
     "spxChange": 0
   },
   "silver": {
-    "usd": 90.495,
+    "usd": 90.42,
     "change24h": 0,
-    "changeWeekly": 16.75418288339899,
-    "changeMonthly": -21.36339823887483,
+    "changeWeekly": 16.657414024249796,
+    "changeMonthly": -21.428574269847463,
     "changeYTD": 0
   },
   "trendingCoins": [
@@ -97,10 +103,10 @@
     "Pudgy Penguins",
     "Espresso",
     "Flying Tulip",
-    "Aztec"
+    "Solana"
   ],
   "portfolio": {
-    "startDate": "2026-02-23",
+    "startDate": "2026-02-25",
     "totalDeposited": 550,
     "totalValue": 550,
     "totalReturn": 0,
@@ -119,13 +125,13 @@
         "stopLoss": "$61000",
         "amount": 50,
         "layer": 3,
-        "openDate": "2026-02-25T07:06:02.208Z",
+        "openDate": "2026-02-25T07:06:27.065Z",
         "pattern": "VOLUME_ANOMALY"
       }
     ],
     "closedTrades": [],
-    "agentReport": "Portföyünüzde $300'lik TEFAS para piyasası fonu önerdim. Ek olarak, $150'lik yatırımınız için BTC ve ETH üzerinde durulması öneriliyor. Hacim anomalileri incelenmeli.",
-    "lastUpdate": "2026-02-25T07:06:02.208Z"
+    "agentReport": "Portföyünüz şu anda %100 nakit durumunda. Fırsatları değerlendirmek için yeniden pozisyon almak mantıklı olabilir. Yakın dönemdeki gelişmelere odaklanmak ve olası riskleri göz önünde bulundurmak gerekiyor.",
+    "lastUpdate": "2026-02-25T07:06:27.065Z"
   },
   "signals": []
 }
