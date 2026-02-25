@@ -1,5 +1,5 @@
 {
-  "startDate": "2026-02-23",
+  "startDate": "2026-02-25",
   "totalDeposited": 550,
   "totalValue": 550,
   "totalReturn": 0,
@@ -11,6 +11,6 @@
   },
   "positions": [],
   "closedTrades": [],
-  "agentReport": "Sistem bugün başlatıldı. İlk analiz yarın sabah 09:00'da üretilecek.\n\nKatman 1 ($300): TEFAS para piyasası fonlarına yönlendirilecek — TP2 veya PRY önerilir.\nKatman 2 ($150): Altın ve BTC/ETH spot için beklemede.\nKatman 3 ($100): Hacim anomalisi ve price action sinyali bekleniyor.",
-  "lastUpdate": "2026-02-25T07:03:53.041Z"
+  "agentReport": "",
+  "lastUpdate": "2026-02-25T07:06:03.073Z"
 }
