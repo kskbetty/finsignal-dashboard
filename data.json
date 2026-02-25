@@ -1,31 +1,60 @@
 {
-  "lastUpdate": "25.02.2026 06:47:45",
+  "lastUpdate": "25.02.2026 06:51:01",
   "date": "25 Şubat 2026",
-  "marketSentiment": "BULLISH",
-  "sentimentScore": 65,
-  "summary": "Kripto para ve borsa piyasalarında pozitif bir hava hakim. Fırsatları değerlendirmekte fayda var.",
-  "topOpportunity": "Bitcoin ve Solana'daki yükselişler.",
-  "topRisk": "Gümüş ve para piyasası fonlarının volatilitesi.",
-  "opportunities": [],
-  "fonSignals": [],
-  "watchlist": [],
+  "marketSentiment": "NEUTRAL",
+  "sentimentScore": 11,
+  "summary": "Piyasalarda aşırı korku durumu söz konusu. Bitcoin'de hacim anomalisine dayalı fırsatlar mevcut.",
+  "topOpportunity": "Bitcoin'de hacim anomalisine bağlı olarak kısa vadeli alım fırsatı gözlemleniyor.",
+  "topRisk": "Piyasa genel durumunun belirsizliği yatırım kararlarını olumsuz etkileyebilir.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "asset": "BTC",
+      "score": 8,
+      "type": "BULL",
+      "pattern": "VOLUME_ANOMALY",
+      "text": "Hacim anomalisinin arttığı Bitcoin, yukarı yönlü hareket potansiyeline sahip. Stratejik olarak uzun pozisyon alınabilir.",
+      "entry": "$65000",
+      "target": "$72000",
+      "stopLoss": "$61000",
+      "riskReward": "1:2.3",
+      "layer": 3,
+      "suggestedAmount": "$50",
+      "timeframe": "3-7 gün",
+      "confidence": "HIGH"
+    }
+  ],
+  "fonSignals": [
+    {
+      "asset": "YKT",
+      "action": "BEKLE",
+      "text": "Piyasa koşulları nedeniyle YKT'de işlem yapmadan önce daha fazla verilere ihtiyaç var."
+    }
+  ],
+  "watchlist": [
+    {
+      "asset": "SOL",
+      "reason": "Compression pattern — henüz breakout vermedi",
+      "triggerLevel": "$85"
+    }
+  ],
   "etf": {},
   "prices": {
     "btc": {
-      "price": 65070,
-      "change24h": 2.9993809120275627
+      "price": 65052,
+      "change24h": 2.970627164324929
     },
     "eth": {
-      "price": 1891.22,
-      "change24h": 3.558667847342413
+      "price": 1890.22,
+      "change24h": 3.503867239060005
     },
     "sol": {
-      "price": 81.76,
-      "change24h": 6.487848664077746
+      "price": 81.74,
+      "change24h": 6.46810927237707
     },
     "xrp": {
       "price": 1.37,
-      "change24h": 2.520816131436084
+      "change24h": 2.486943313079515
     }
   },
   "fearGreed": {
@@ -63,10 +92,10 @@
     "spxChange": 0
   },
   "silver": {
-    "usd": 90.36,
+    "usd": 90.4,
     "change24h": 0,
-    "changeWeekly": 16.580006811519738,
-    "changeMonthly": -21.480709790910307,
+    "changeWeekly": 16.631614901085314,
+    "changeMonthly": -21.44595056698705,
     "changeYTD": 0
   },
   "trendingCoins": [
@@ -77,101 +106,10 @@
     "Flying Tulip"
   ],
   "portfolio": {
-    "data": "{\n  \"data\": \"{\\n  \\\"data\\\": \\\"{\\\\n  \\\\\\\"data\\\\\\\": \\\\\\\"{\\\\\\\\n  \\\\\\\\\\\\\\\"data\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"{\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"startDate\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"2026-02-23\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"totalDeposited\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": 550,\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"totalValue\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": 550,\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"totalReturn\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": 0,\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"monthlyReturn\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": 0,\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"cash\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": {\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"layer1\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": 300,\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"layer2\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": 150,\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"layer3\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": 100\\\\\\\\\\\\\\\\n  },\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"positions\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": [],\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"closedTrades\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": [],\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"agentReport\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"Sistem bugün başlatıldı. İlk analiz yarın sabah 09:00'da üretilecek.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\nKatman 1 ($300): TEFAS para piyasası fonlarına yönlendirilecek — TP2 veya PRY önerilir.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\nKatman 2 ($150): Altın ve BTC/ETH spot için beklemede.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\nKatman 3 ($100): Hacim anomalisi ve price action sinyali bekleniyor.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"lastUpdate\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\n}\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\"\\\\\\\\n}\\\\\\\"\\\\n}\\\"\\n}\"\n}",
+    "data": "{\n  \"data\": \"{\\n  \\\"data\\\": \\\"{\\\\n  \\\\\\\"data\\\\\\\": \\\\\\\"{\\\\\\\\n  \\\\\\\\\\\\\\\"data\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"{\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"data\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"{\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"startDate\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"2026-02-23\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"totalDeposited\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": 550,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"totalValue\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": 550,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"totalReturn\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": 0,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"monthlyReturn\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": 0,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"cash\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": {\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"layer1\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": 300,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"layer2\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": 150,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"layer3\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": 100\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n  },\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"positions\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": [],\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"closedTrades\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": [],\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"agentReport\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"Sistem bugün başlatıldı. İlk analiz yarın sabah 09:00'da üretilecek.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\nKatman 1 ($300): TEFAS para piyasası fonlarına yönlendirilecek — TP2 veya PRY önerilir.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\nKatman 2 ($150): Altın ve BTC/ETH spot için beklemede.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\nKatman 3 ($100): Hacim anomalisi ve price action sinyali bekleniyor.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"lastUpdate\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\n}\\\\\\\\\\\\\\\"\\\\\\\\n}\\\\\\\"\\\\n}\\\"\\n}\"\n}",
     "positions": [],
-    "agentReport": "",
-    "lastUpdate": "2026-02-25T06:47:45.273Z"
+    "agentReport": "Portföydeki layer'lar stratejik olarak dengelenmiş. İlk analizler sonuçlanmamış olsa da, yatırım alanları için iyi bir potansiyel barındırıyor.",
+    "lastUpdate": "2026-02-25T06:51:01.109Z"
   },
-  "signals": [
-    {
-      "id": 0,
-      "expert": "Willy Woo",
-      "asset": "BTC",
-      "type": "BULL",
-      "confidence": "High",
-      "text": "Bitcoin, son 24 saatte %3 artışla yükseliyor. Yatırımcıların ilgisi artıyor.",
-      "time": "06:47"
-    },
-    {
-      "id": 1,
-      "expert": "Arthur Hayes",
-      "asset": "ETH",
-      "type": "BULL",
-      "confidence": "High",
-      "text": "Ethereum, son fiyat hareketleri ile destek buluyor. Bu, alım fırsatı yaratabilir.",
-      "time": "06:47"
-    },
-    {
-      "id": 2,
-      "expert": "Haluk Burumcekci",
-      "asset": "THYAO",
-      "type": "BULL",
-      "confidence": "Med",
-      "text": "THYAO, son düzeltmelerin ardından alım fırsatı sunuyor.",
-      "time": "06:47"
-    },
-    {
-      "id": 3,
-      "expert": "Michael Saylor",
-      "asset": "SOL",
-      "type": "BULL",
-      "confidence": "High",
-      "text": "Solana, hızlı bir büyüme göstermekte. Yeni yatırımcılar cezbetmekte.",
-      "time": "06:47"
-    },
-    {
-      "id": 4,
-      "expert": "Murat Muratoglu",
-      "asset": "GARAN",
-      "type": "NEU",
-      "confidence": "Low",
-      "text": "GARAN için beklemede kalmak en iyi strateji olabilir. Fırsatlar değerlendirilmeli.",
-      "time": "06:47"
-    },
-    {
-      "id": 5,
-      "expert": "Warren Buffett",
-      "asset": "XRP",
-      "type": "BULL",
-      "confidence": "High",
-      "text": "XRP, yatırımcıların ilgisini çekmeye devam ediyor. Yüksek potansiyele sahip.",
-      "time": "06:47"
-    },
-    {
-      "id": 6,
-      "expert": "Islam Memis",
-      "asset": "YKT",
-      "type": "BULL",
-      "confidence": "Med",
-      "text": "Altın fiyatları yükseliyor, bu durum YKT fonunu cazip kılmakta.",
-      "time": "06:47"
-    },
-    {
-      "id": 7,
-      "expert": "Ray Dalio",
-      "asset": "ZYG",
-      "type": "BULL",
-      "confidence": "Medium",
-      "text": "Gümüş yüksek volatilitesi ile dikkat çekiyor, alım yapmayı düşünebilirsiniz.",
-      "time": "06:47"
-    },
-    {
-      "id": 8,
-      "expert": "Cathie Wood",
-      "asset": "PRY",
-      "type": "BULL",
-      "confidence": "High",
-      "text": "PRY fonu düşük riskli, iyi bir getiri potansiyeli sunuyor.",
-      "time": "06:47"
-    },
-    {
-      "id": 9,
-      "expert": "Lyn Alden",
-      "asset": "TP2",
-      "type": "BULL",
-      "confidence": "High",
-      "text": "TP2, para piyasasında güvenli liman arayanlar için iyi bir seçim.",
-      "time": "06:47"
-    }
-  ]
+  "signals": []
 }
