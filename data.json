@@ -1,11 +1,11 @@
 {
-  "lastUpdate": "26.02.2026 07:00:15",
+  "lastUpdate": "26.02.2026 13:00:17",
   "date": "26 Şubat 2026",
-  "marketSentiment": "BULLISH",
-  "sentimentScore": 85,
-  "summary": "Piyasalarda genel bir boğa durumu gözleniyor. Korku ve açgözlülük endeksi ekstrem korkuda ve fiyat hareketleri olumlu yönde.",
-  "topOpportunity": "Bitcoin, hacim anomalisi ile dikkat çekiyor.",
-  "topRisk": "Yüksek volatilite nedeniyle altcoin'lerde dikkatli olunmalı.",
+  "marketSentiment": "BEARISH",
+  "sentimentScore": 20,
+  "summary": "Piyasa aşırı korku durumunda. BTC'nin hacim anomalisi dikkat çekiyor.",
+  "topOpportunity": "BTC'de yer almak potansiyel kazanç sağlayabilir.",
+  "topRisk": "Piyasa durumu belli belirsiz ve düşüş riski mevcut.",
   "opportunities": [
     {
       "rank": 1,
@@ -13,7 +13,7 @@
       "score": 8,
       "type": "BULL",
       "pattern": "VOLUME_ANOMALY",
-      "text": "Bitcoin'de hacim anomalisinin yanı sıra fiyat hareketleri de olumlu yönde devam ediyor. Bu nedenle, potansiyel kazanç fırsatları bulunuyor.",
+      "text": "BTC'de hacim artışı gözlemleniyor. Bu durum, alım fırsatı yaratıyor ve kısa sürede geri dönüş sağlayabilir.",
       "entry": "$65000",
       "target": "$72000",
       "stopLoss": "$61000",
@@ -28,7 +28,7 @@
     {
       "asset": "YKT",
       "action": "AL",
-      "text": "YKT, piyasa dengesi açısından uygun bir alım fırsatı sunuyor."
+      "text": "Düşük riskle kısa vadeli kazanç potansiyeli var."
     }
   ],
   "watchlist": [
@@ -41,20 +41,20 @@
   "etf": {},
   "prices": {
     "btc": {
-      "price": 68180,
-      "change24h": 5.0783952567502935
+      "price": 68165,
+      "change24h": 3.048928719609175
     },
     "eth": {
-      "price": 2062.74,
-      "change24h": 9.432495218728011
+      "price": 2069.74,
+      "change24h": 6.030113670213452
     },
     "sol": {
-      "price": 87.64,
-      "change24h": 7.5048552608031684
+      "price": 87.66,
+      "change24h": 4.758627674147873
     },
     "xrp": {
       "price": 1.44,
-      "change24h": 6.268725229677516
+      "change24h": 3.172316530571927
     }
   },
   "fearGreed": {
@@ -63,25 +63,25 @@
   },
   "bist": {
     "thyao": {
-      "price": 307,
+      "price": 313.5,
       "change": 0,
       "currency": "TRY",
       "symbol": "THYAO.IS"
     },
     "garan": {
-      "price": 160.2,
+      "price": 162.9,
       "change": 0,
       "currency": "TRY",
       "symbol": "GARAN.IS"
     },
     "asels": {
-      "price": 306.25,
+      "price": 311,
       "change": 0,
       "currency": "TRY",
       "symbol": "ASELS.IS"
     },
     "eregl": {
-      "price": 31.38,
+      "price": 31.8,
       "change": 0,
       "currency": "TRY",
       "symbol": "EREGL.IS"
@@ -92,18 +92,18 @@
     "spxChange": 0
   },
   "silver": {
-    "usd": 89.51,
+    "usd": 87.325,
     "change24h": 0,
-    "changeWeekly": 15.399986229417898,
-    "changeMonthly": -22.219325067758277,
+    "changeWeekly": 12.582987429425765,
+    "changeMonthly": -24.11800872540717,
     "changeYTD": 0
   },
   "trendingCoins": [
-    "Bitcoin",
-    "Centrifuge",
-    "Pudgy Penguins",
+    "Power Protocol",
     "ETHGas",
-    "Polkadot"
+    "Bitcoin",
+    "Ethereum",
+    "Solana"
   ],
   "portfolio": {
     "startDate": "2026-02-25",
@@ -125,15 +125,15 @@
         "stopLoss": "$61000",
         "amount": 50,
         "layer": 3,
-        "openDate": "2026-02-26T07:00:15.290Z",
+        "openDate": "2026-02-26T13:00:17.426Z",
         "pattern": "VOLUME_ANOMALY",
         "pnlPct": 0,
         "pnlUSD": 0
       }
     ],
     "closedTrades": [],
-    "agentReport": "Portföyünüzde toplam 550 USD bulunmakta. Yatırımlarınızın %54'ü nakitte, bu da piyasa fırsatlarını değerlendirme imkanı sağlıyor. Ek yatırım yapmayı düşünebilirsiniz.",
-    "lastUpdate": "2026-02-26T07:00:15.290Z"
+    "agentReport": "Portföyünüzde toplam 550$ var. Şu an için kazanç sağlamadınız ama piyasa koşulları değişebilir. BTC ve ETH'de alım fırsatları değerlendirilerek daha iyi bir konum elde edilebilir.",
+    "lastUpdate": "2026-02-26T13:00:17.426Z"
   },
   "signals": []
 }
