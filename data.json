@@ -1,11 +1,11 @@
 {
-  "lastUpdate": "27.02.2026 07:00:14",
+  "lastUpdate": "27.02.2026 13:00:16",
   "date": "27 Şubat 2026",
   "marketSentiment": "BEARISH",
-  "sentimentScore": 13,
-  "summary": "Piyasalarda aşırı korku hakim. Kripto varlıkları üzerindeki satış baskısı devam etmekte.",
-  "topOpportunity": "BTC, hacim anomalisi ve fiyat hareketi verileri ile dikkat çekiyor.",
-  "topRisk": "Piyasa karar vericileri, daha fazla belirsizlik yaratabilir ve düşüşleri tetikleyebilir.",
+  "sentimentScore": 12,
+  "summary": "Piyasalarda aşırı korku hâkim, bu da olumsuz bir hava yaratıyor. Bitcoin ve Ethereum gibi varlıklarda düşüş sürüyor.",
+  "topOpportunity": "BTC'de hacim anomalisi görüldü, alım fırsatı sunabilir.",
+  "topRisk": "Piyasa genelinde düşüş devam ederse, yatırım kayıpları yaşanabilir.",
   "opportunities": [
     {
       "rank": 1,
@@ -13,7 +13,7 @@
       "score": 8,
       "type": "BULL",
       "pattern": "VOLUME_ANOMALY",
-      "text": "Bitcoin'deki hacim anomalisi, potansiyel bir kısa sürede toparlanma işareti olabilir. Ayrıca, son fiyat hareketi güçlü bir geri dönüş ihtimaline işaret ediyor.",
+      "text": "Bitcoin'de son 24 saatte hacim artışı gözlemleniyor. Bu durum, potansiyel bir toparlanmanın habercisi olabilir.",
       "entry": "$65000",
       "target": "$72000",
       "stopLoss": "$61000",
@@ -28,7 +28,7 @@
     {
       "asset": "YKT",
       "action": "BEKLE",
-      "text": "Piyasa koşullarının düzelmesini beklemek daha iyi bir strateji olabilir."
+      "text": "Piyasa belirsizliği nedeniyle bu varlıkta alım yapmak için beklemek uygun."
     }
   ],
   "watchlist": [
@@ -41,20 +41,20 @@
   "etf": {},
   "prices": {
     "btc": {
-      "price": 67665,
-      "change24h": -0.7526987102662441
+      "price": 65816,
+      "change24h": -3.4545987372797593
     },
     "eth": {
-      "price": 2036.33,
-      "change24h": -1.2803526709467121
+      "price": 1957.44,
+      "change24h": -5.422672461295637
     },
     "sol": {
-      "price": 87.33,
-      "change24h": -0.3516544672989158
+      "price": 82.99,
+      "change24h": -5.319161952216389
     },
     "xrp": {
-      "price": 1.41,
-      "change24h": -2.172399650354929
+      "price": 1.38,
+      "change24h": -4.626314771571802
     }
   },
   "fearGreed": {
@@ -63,25 +63,25 @@
   },
   "bist": {
     "thyao": {
-      "price": 311.5,
+      "price": 306.75,
       "change": 0,
       "currency": "TRY",
       "symbol": "THYAO.IS"
     },
     "garan": {
-      "price": 163.9,
+      "price": 159.9,
       "change": 0,
       "currency": "TRY",
       "symbol": "GARAN.IS"
     },
     "asels": {
-      "price": 311,
+      "price": 317.75,
       "change": 0,
       "currency": "TRY",
       "symbol": "ASELS.IS"
     },
     "eregl": {
-      "price": 31.9,
+      "price": 32.06,
       "change": 0,
       "currency": "TRY",
       "symbol": "EREGL.IS"
@@ -92,18 +92,18 @@
     "spxChange": 0
   },
   "silver": {
-    "usd": 90.94,
+    "usd": 90.085,
     "change24h": 0,
-    "changeWeekly": 10.521013589526266,
-    "changeMonthly": -13.819735811533867,
+    "changeWeekly": 9.481912697796764,
+    "changeMonthly": -14.6299888707422,
     "changeYTD": 0
   },
   "trendingCoins": [
+    "Fabric Protocol",
+    "Sahara AI",
     "Bitcoin",
-    "Terra Luna Classic",
-    "Power Protocol",
     "Venice Token",
-    "Solana"
+    "Power Protocol"
   ],
   "portfolio": {
     "startDate": "2026-02-25",
@@ -125,15 +125,15 @@
         "stopLoss": "$61000",
         "amount": 50,
         "layer": 3,
-        "openDate": "2026-02-27T07:00:14.673Z",
+        "openDate": "2026-02-27T13:00:16.745Z",
         "pattern": "VOLUME_ANOMALY",
         "pnlPct": 0,
         "pnlUSD": 0
       }
     ],
     "closedTrades": [],
-    "agentReport": "Portföyde toplam 550 USD bulunmakta ve henüz açılmış herhangi bir pozisyon yok. Mevcut durum, piyasaların volatil olduğu bir dönemde dikkatli bir yaklaşım gerektiriyor. Önerilen yatırımlar için layer 1 ve layer 2'yi değerlendirerek çeşitlendirmeye gitmek faydalı olabilir.",
-    "lastUpdate": "2026-02-27T07:00:14.673Z"
+    "agentReport": "Portföyde toplam 550$ yatırım var. Şu an için kazanç yok ve yatırımın tamamı nakit olarak bulunmakta. Düşünmekte olduğunuz piyasa fırsatları için katmanlar arasında geçiş yapmayı değerlendirebilirsiniz.",
+    "lastUpdate": "2026-02-27T13:00:16.746Z"
   },
   "signals": []
 }
