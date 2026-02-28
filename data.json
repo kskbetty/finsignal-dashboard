@@ -1,11 +1,11 @@
 {
-  "lastUpdate": "27.02.2026 13:00:16",
-  "date": "27 Şubat 2026",
+  "lastUpdate": "28.02.2026 13:00:14",
+  "date": "28 Şubat 2026",
   "marketSentiment": "BEARISH",
-  "sentimentScore": 12,
-  "summary": "Piyasalarda aşırı korku hâkim, bu da olumsuz bir hava yaratıyor. Bitcoin ve Ethereum gibi varlıklarda düşüş sürüyor.",
-  "topOpportunity": "BTC'de hacim anomalisi görüldü, alım fırsatı sunabilir.",
-  "topRisk": "Piyasa genelinde düşüş devam ederse, yatırım kayıpları yaşanabilir.",
+  "sentimentScore": 20,
+  "summary": "Piyasa aşırı korku seviyesinde. Kripto paralarda düşüş devam ediyor.",
+  "topOpportunity": "BTC için hacim anomalisine dayalı yükseliş fırsatı gözlemleniyor.",
+  "topRisk": "Düşen piyasada volatilitenin artması risk oluşturabilir.",
   "opportunities": [
     {
       "rank": 1,
@@ -13,7 +13,7 @@
       "score": 8,
       "type": "BULL",
       "pattern": "VOLUME_ANOMALY",
-      "text": "Bitcoin'de son 24 saatte hacim artışı gözlemleniyor. Bu durum, potansiyel bir toparlanmanın habercisi olabilir.",
+      "text": "Son dönemde BTC'de yaşanan hacim artışları, potansiyel toparlanma sinyali veriyor. Yükseliş trendinin başlaması için 65,000$ seviyeleri önemli.",
       "entry": "$65000",
       "target": "$72000",
       "stopLoss": "$61000",
@@ -28,7 +28,7 @@
     {
       "asset": "YKT",
       "action": "BEKLE",
-      "text": "Piyasa belirsizliği nedeniyle bu varlıkta alım yapmak için beklemek uygun."
+      "text": "Piyasada belirsizlik devam ediyor, bekleme stratejisi daha uygun."
     }
   ],
   "watchlist": [
@@ -41,69 +41,69 @@
   "etf": {},
   "prices": {
     "btc": {
-      "price": 65816,
-      "change24h": -3.4545987372797593
+      "price": 64009,
+      "change24h": -2.7486433541851096
     },
     "eth": {
-      "price": 1957.44,
-      "change24h": -5.422672461295637
+      "price": 1868.47,
+      "change24h": -4.586462927457163
     },
     "sol": {
-      "price": 82.99,
-      "change24h": -5.319161952216389
+      "price": 78.83,
+      "change24h": -5.020799457100779
     },
     "xrp": {
-      "price": 1.38,
-      "change24h": -4.626314771571802
+      "price": 1.3,
+      "change24h": -5.852133753989664
     }
   },
   "fearGreed": {
-    "value": 13,
+    "value": 11,
     "label": "Extreme Fear"
   },
   "bist": {
     "thyao": {
-      "price": 306.75,
+      "price": 307.5,
       "change": 0,
       "currency": "TRY",
       "symbol": "THYAO.IS"
     },
     "garan": {
-      "price": 159.9,
+      "price": 160.1,
       "change": 0,
       "currency": "TRY",
       "symbol": "GARAN.IS"
     },
     "asels": {
-      "price": 317.75,
+      "price": 322,
       "change": 0,
       "currency": "TRY",
       "symbol": "ASELS.IS"
     },
     "eregl": {
-      "price": 32.06,
+      "price": 32.66,
       "change": 0,
       "currency": "TRY",
       "symbol": "EREGL.IS"
     }
   },
   "stocks": {
-    "spx": 6908.86,
+    "spx": 6878.88,
     "spxChange": 0
   },
   "silver": {
-    "usd": 90.085,
+    "usd": 93.291,
     "change24h": 0,
-    "changeWeekly": 9.481912697796764,
-    "changeMonthly": -14.6299888707422,
+    "changeWeekly": 12.638093455195213,
+    "changeMonthly": -18.061020452006098,
     "changeYTD": 0
   },
   "trendingCoins": [
-    "Fabric Protocol",
-    "Sahara AI",
+    "PAX Gold",
     "Bitcoin",
-    "Venice Token",
-    "Power Protocol"
+    "Pudgy Penguins",
+    "Tether Gold",
+    "Hyperliquid"
   ],
   "portfolio": {
     "startDate": "2026-02-25",
@@ -125,15 +125,15 @@
         "stopLoss": "$61000",
         "amount": 50,
         "layer": 3,
-        "openDate": "2026-02-27T13:00:16.745Z",
+        "openDate": "2026-02-28T13:00:14.597Z",
         "pattern": "VOLUME_ANOMALY",
         "pnlPct": 0,
         "pnlUSD": 0
       }
     ],
     "closedTrades": [],
-    "agentReport": "Portföyde toplam 550$ yatırım var. Şu an için kazanç yok ve yatırımın tamamı nakit olarak bulunmakta. Düşünmekte olduğunuz piyasa fırsatları için katmanlar arasında geçiş yapmayı değerlendirebilirsiniz.",
-    "lastUpdate": "2026-02-27T13:00:16.746Z"
+    "agentReport": "Portföydeki varlıkların tamamı nakit durumunda. Yüksek getiri potansiyeli olan volatil altcoinlerde dikkatli olunmalı. Geçici birikim yaparak yatırım fırsatları değerlendirilmelidir.",
+    "lastUpdate": "2026-02-28T13:00:14.597Z"
   },
   "signals": []
 }
