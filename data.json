@@ -1,11 +1,11 @@
 {
-  "lastUpdate": "02.03.2026 07:00:20",
+  "lastUpdate": "02.03.2026 13:00:13",
   "date": "2 Mart 2026",
   "marketSentiment": "BEARISH",
-  "sentimentScore": 20,
-  "summary": "Piyasalarda aşırı korku hakim ve BTC, ETH fiyatlarında düşüş gözlemleniyor. Kısa vadede volatilite bekleniyor.",
-  "topOpportunity": "BTC fiyatında hacim anomalisi var.",
-  "topRisk": "Piyasa genelinde bearish bir görünüm mevcut.",
+  "sentimentScore": 10,
+  "summary": "Piyasalarda aşırı korku hakim. Özellikle BTC'de hacim anomalisinden kaynaklı alım fırsatları dikkat çekiyor.",
+  "topOpportunity": "BTC'deki hacim anomalisine bağlı olarak ilerleyen günlerde bir toparlanma beklenebilir.",
+  "topRisk": "Genel piyasa durumu ve korku endeksi nedeniyle volatilite artabilir.",
   "opportunities": [
     {
       "rank": 1,
@@ -13,7 +13,7 @@
       "score": 8,
       "type": "BULL",
       "pattern": "VOLUME_ANOMALY",
-      "text": "BTC'de hacim anomalisi gözlemleniyor, bu da potansiyel bir alım fırsatı oluşturuyor. Fiyat düzeltmesi sonrası yükseliş bekleniyor.",
+      "text": "BTC'de gözlemlenen hacim anomali, alım yapma fırsatını destekliyor. Fiyat geri çekilmelerine rağmen potansiyel bir yükseliş bekleniyor.",
       "entry": "$65000",
       "target": "$72000",
       "stopLoss": "$61000",
@@ -28,7 +28,7 @@
     {
       "asset": "YKT",
       "action": "BEKLE",
-      "text": "Fiyat hareketleri henüz net bir yön göstermiyor, beklemek mantıklı."
+      "text": "Piyasa dengesiz durumda, beklemek daha mantıklı görünüyor."
     }
   ],
   "watchlist": [
@@ -41,20 +41,20 @@
   "etf": {},
   "prices": {
     "btc": {
-      "price": 66218,
-      "change24h": -1.069427787920208
+      "price": 65958,
+      "change24h": -0.5473828149029633
     },
     "eth": {
-      "price": 1945.07,
-      "change24h": -2.697605877535973
+      "price": 1938.23,
+      "change24h": -2.0445097691260563
     },
     "sol": {
-      "price": 83.21,
-      "change24h": -4.0380393747960985
+      "price": 83.73,
+      "change24h": -1.357228940364319
     },
     "xrp": {
       "price": 1.35,
-      "change24h": -3.227360628671864
+      "change24h": -1.4468931956897098
     }
   },
   "fearGreed": {
@@ -63,25 +63,25 @@
   },
   "bist": {
     "thyao": {
-      "price": 307.5,
+      "price": 289.75,
       "change": 0,
       "currency": "TRY",
       "symbol": "THYAO.IS"
     },
     "garan": {
-      "price": 160.1,
+      "price": 149.9,
       "change": 0,
       "currency": "TRY",
       "symbol": "GARAN.IS"
     },
     "asels": {
-      "price": 322,
+      "price": 335.5,
       "change": 0,
       "currency": "TRY",
       "symbol": "ASELS.IS"
     },
     "eregl": {
-      "price": 32.66,
+      "price": 31.9,
       "change": 0,
       "currency": "TRY",
       "symbol": "EREGL.IS"
@@ -92,18 +92,18 @@
     "spxChange": 0
   },
   "silver": {
-    "usd": 95.45,
+    "usd": 95.53,
     "change24h": 0,
-    "changeWeekly": 10.317480962226195,
-    "changeMonthly": 24.319462736720602,
+    "changeWeekly": 10.40994403982173,
+    "changeMonthly": 24.423661636381812,
     "changeYTD": 0
   },
   "trendingCoins": [
     "Venice Token",
-    "Pudgy Penguins",
-    "Kyber Network Crystal",
-    "Bitcoin",
-    "MANTRA [Old]"
+    "Fabric Protocol",
+    "PAX Gold",
+    "Solana",
+    "Bitcoin"
   ],
   "portfolio": {
     "startDate": "2026-02-25",
@@ -125,15 +125,15 @@
         "stopLoss": "$61000",
         "amount": 50,
         "layer": 3,
-        "openDate": "2026-03-02T07:00:20.317Z",
+        "openDate": "2026-03-02T13:00:13.749Z",
         "pattern": "VOLUME_ANOMALY",
         "pnlPct": 0,
         "pnlUSD": 0
       }
     ],
     "closedTrades": [],
-    "agentReport": "Portföyde herhangi bir varlık bulunmuyor ancak 550$ toplam değer mevcut. Mevcut piyasa koşullarında temkinli olmak önemli.",
-    "lastUpdate": "2026-03-02T07:00:20.317Z"
+    "agentReport": "Portföy mevcut durumda sabit kalmış. Ürün çeşitliliği az, risk yönetimi önem kazanıyor. Alt tabakalardaki alanlar değerlendirilmeli.",
+    "lastUpdate": "2026-03-02T13:00:13.749Z"
   },
   "signals": []
 }
