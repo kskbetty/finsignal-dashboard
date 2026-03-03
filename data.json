@@ -1,11 +1,11 @@
 {
-  "lastUpdate": "02.03.2026 13:00:13",
-  "date": "2 Mart 2026",
-  "marketSentiment": "BEARISH",
-  "sentimentScore": 10,
-  "summary": "Piyasalarda aşırı korku hakim. Özellikle BTC'de hacim anomalisinden kaynaklı alım fırsatları dikkat çekiyor.",
-  "topOpportunity": "BTC'deki hacim anomalisine bağlı olarak ilerleyen günlerde bir toparlanma beklenebilir.",
-  "topRisk": "Genel piyasa durumu ve korku endeksi nedeniyle volatilite artabilir.",
+  "lastUpdate": "03.03.2026 07:00:12",
+  "date": "3 Mart 2026",
+  "marketSentiment": "BULLISH",
+  "sentimentScore": 80,
+  "summary": "Piyasa aşırı korku seviyesinde, bu da alım fırsatlarını artırıyor. BTC yüksek hacim anomalisi gösteriyor ve kısa vadeli yükseliş potansiyeli taşıyor.",
+  "topOpportunity": "BTC, hacim anomalisine bağlı olarak önemli bir yükseliş fırsatı sunuyor.",
+  "topRisk": "Piyasa belirsizlikleri yatırımcıların kayıplar yaşamasına neden olabilir.",
   "opportunities": [
     {
       "rank": 1,
@@ -13,7 +13,7 @@
       "score": 8,
       "type": "BULL",
       "pattern": "VOLUME_ANOMALY",
-      "text": "BTC'de gözlemlenen hacim anomali, alım yapma fırsatını destekliyor. Fiyat geri çekilmelerine rağmen potansiyel bir yükseliş bekleniyor.",
+      "text": "BTC'de yüksek hacim anomalisine bağlı olarak fiyatın yükselmesi bekleniyor. Bu durum, alım fırsatını pekiştiriyor.",
       "entry": "$65000",
       "target": "$72000",
       "stopLoss": "$61000",
@@ -27,83 +27,83 @@
   "fonSignals": [
     {
       "asset": "YKT",
-      "action": "BEKLE",
-      "text": "Piyasa dengesiz durumda, beklemek daha mantıklı görünüyor."
+      "action": "AL",
+      "text": "YKT'da potansiyel alım fırsatları gözlemleniyor."
     }
   ],
   "watchlist": [
     {
       "asset": "SOL",
-      "reason": "Compression pattern — henüz breakout vermedi",
+      "reason": "Compression pattern — henüz breakout vermedi.",
       "triggerLevel": "$85"
     }
   ],
   "etf": {},
   "prices": {
     "btc": {
-      "price": 65958,
-      "change24h": -0.5473828149029633
+      "price": 68084,
+      "change24h": 2.8383363407754185
     },
     "eth": {
-      "price": 1938.23,
-      "change24h": -2.0445097691260563
+      "price": 1997.65,
+      "change24h": 2.764428861393311
     },
     "sol": {
-      "price": 83.73,
-      "change24h": -1.357228940364319
+      "price": 85.68,
+      "change24h": 2.9514041876859585
     },
     "xrp": {
-      "price": 1.35,
-      "change24h": -1.4468931956897098
+      "price": 1.36,
+      "change24h": 0.8186332570852837
     }
   },
   "fearGreed": {
-    "value": 10,
+    "value": 14,
     "label": "Extreme Fear"
   },
   "bist": {
     "thyao": {
-      "price": 289.75,
+      "price": 289,
       "change": 0,
       "currency": "TRY",
       "symbol": "THYAO.IS"
     },
     "garan": {
-      "price": 149.9,
+      "price": 146.3,
       "change": 0,
       "currency": "TRY",
       "symbol": "GARAN.IS"
     },
     "asels": {
-      "price": 335.5,
+      "price": 340,
       "change": 0,
       "currency": "TRY",
       "symbol": "ASELS.IS"
     },
     "eregl": {
-      "price": 31.9,
+      "price": 31.5,
       "change": 0,
       "currency": "TRY",
       "symbol": "EREGL.IS"
     }
   },
   "stocks": {
-    "spx": 6878.88,
+    "spx": 6881.62,
     "spxChange": 0
   },
   "silver": {
-    "usd": 95.53,
+    "usd": 84.375,
     "change24h": 0,
-    "changeWeekly": 10.40994403982173,
-    "changeMonthly": 24.423661636381812,
+    "changeWeekly": -3.5240183251325727,
+    "changeMonthly": 1.6052120445614264,
     "changeYTD": 0
   },
   "trendingCoins": [
+    "Bitcoin",
     "Venice Token",
-    "Fabric Protocol",
-    "PAX Gold",
-    "Solana",
-    "Bitcoin"
+    "Freysa AI",
+    "Hyperliquid",
+    "Ethereum"
   ],
   "portfolio": {
     "startDate": "2026-02-25",
@@ -125,15 +125,15 @@
         "stopLoss": "$61000",
         "amount": 50,
         "layer": 3,
-        "openDate": "2026-03-02T13:00:13.749Z",
+        "openDate": "2026-03-03T07:00:12.582Z",
         "pattern": "VOLUME_ANOMALY",
         "pnlPct": 0,
         "pnlUSD": 0
       }
     ],
     "closedTrades": [],
-    "agentReport": "Portföy mevcut durumda sabit kalmış. Ürün çeşitliliği az, risk yönetimi önem kazanıyor. Alt tabakalardaki alanlar değerlendirilmeli.",
-    "lastUpdate": "2026-03-02T13:00:13.749Z"
+    "agentReport": "Portföy değeri 550$ olarak sabit kaldı. Duyarlılık aşırı korku seviyesinde, bu da potansiyel fırsatlar sunuyor. Yeni pozisyon açmak için dikkatli bir yaklaşım benimsemek faydalı olacaktır.",
+    "lastUpdate": "2026-03-03T07:00:12.582Z"
   },
   "signals": []
 }
