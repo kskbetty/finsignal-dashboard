@@ -1,11 +1,11 @@
 {
-  "lastUpdate": "03.03.2026 13:00:20",
-  "date": "3 Mart 2026",
+  "lastUpdate": "04.03.2026 07:00:14",
+  "date": "4 Mart 2026",
   "marketSentiment": "BEARISH",
   "sentimentScore": 30,
-  "summary": "Piyasa aşırı korku seviyelerinde. BTC ve ETH gibi varlıklarda küçük bir düşüş yaşanabilir.",
-  "topOpportunity": "BTC'de hacim anomalisi gözlemleniyor.",
-  "topRisk": "Piyasa koşulları nedeniyle volatilite artabilir.",
+  "summary": "Piyasa korku döneminde ve önemli bir olumsuz durum yaşanmaktadır. BTC'de önemli bir hacim anomalisine dikkat edilmesi gerekiyor.",
+  "topOpportunity": "BTC, önemli bir toparlanma yaşıyor ve bu durum fırsatlar sunabilir.",
+  "topRisk": "Piyasa genel olarak zayıf, bu nedenle dikkatli olunması gerekiyor.",
   "opportunities": [
     {
       "rank": 1,
@@ -13,7 +13,7 @@
       "score": 8,
       "type": "BULL",
       "pattern": "VOLUME_ANOMALY",
-      "text": "BTC'de son günlerde hacim artışları dikkat çekiyor. Bu durum fiyatın yukarı yönlü hareketine işaret edebilir.",
+      "text": "BTC'de son dönemde önemli bir hacim artışı gözlemleniyor. Korku ve belirsizliklerle birlikte potansiyel bir yükseliş fırsatı yaratıyor.",
       "entry": "$65000",
       "target": "$72000",
       "stopLoss": "$61000",
@@ -28,7 +28,7 @@
     {
       "asset": "YKT",
       "action": "BEKLE",
-      "text": "YKT'da volatilite yüksek, bu nedenle alım yapmadan önce beklemek faydalı olabilir."
+      "text": "Piyasa durumu nedeniyle YKT için beklemede kalmak en iyi seçenek."
     }
   ],
   "watchlist": [
@@ -41,69 +41,69 @@
   "etf": {},
   "prices": {
     "btc": {
-      "price": 67376,
-      "change24h": 2.077662094829814
+      "price": 68478,
+      "change24h": 0.6948840973865397
     },
     "eth": {
-      "price": 1967.26,
-      "change24h": 1.4396531837863698
+      "price": 1978.82,
+      "change24h": -0.7830538879110069
     },
     "sol": {
-      "price": 84.34,
-      "change24h": 0.7079953207125279
+      "price": 85.49,
+      "change24h": -0.13076357604027258
     },
     "xrp": {
       "price": 1.36,
-      "change24h": 0.6206408752044056
+      "change24h": -0.10997332532624852
     }
   },
   "fearGreed": {
-    "value": 14,
+    "value": 10,
     "label": "Extreme Fear"
   },
   "bist": {
     "thyao": {
-      "price": 288.75,
+      "price": 287,
       "change": 0,
       "currency": "TRY",
       "symbol": "THYAO.IS"
     },
     "garan": {
-      "price": 141.4,
+      "price": 137.6,
       "change": 0,
       "currency": "TRY",
       "symbol": "GARAN.IS"
     },
     "asels": {
-      "price": 324.75,
+      "price": 322.25,
       "change": 0,
       "currency": "TRY",
       "symbol": "ASELS.IS"
     },
     "eregl": {
-      "price": 29.52,
+      "price": 29.14,
       "change": 0,
       "currency": "TRY",
       "symbol": "EREGL.IS"
     }
   },
   "stocks": {
-    "spx": 6881.62,
+    "spx": 6816.63,
     "spxChange": 0
   },
   "silver": {
-    "usd": 82.96,
+    "usd": 84.75,
     "change24h": 0,
-    "changeWeekly": -5.141957316496562,
-    "changeMonthly": -0.098746095472995,
+    "changeWeekly": -6.805664002445728,
+    "changeMonthly": 0.6950621732420508,
     "changeYTD": 0
   },
   "trendingCoins": [
-    "NEAR Protocol",
-    "Aave",
+    "Definitive",
+    "Power Protocol",
+    "Pudgy Penguins",
     "Bitcoin",
-    "Morpho",
-    "Venice Token"
+    "PHALA"
   ],
   "portfolio": {
     "startDate": "2026-02-25",
@@ -125,15 +125,15 @@
         "stopLoss": "$61000",
         "amount": 50,
         "layer": 3,
-        "openDate": "2026-03-03T13:00:20.455Z",
+        "openDate": "2026-03-04T07:00:14.592Z",
         "pattern": "VOLUME_ANOMALY",
         "pnlPct": 0,
         "pnlUSD": 0
       }
     ],
     "closedTrades": [],
-    "agentReport": "Portföyünüzde şu anda yalnızca nakit bulunuyor. Önümüzdeki günlerde BTC ve ETH gibi varlıklara yatırım yapmayı düşünebilirsiniz. Varlıkların fiyat hareketlerini yakından takip etmek önemli.",
-    "lastUpdate": "2026-03-03T13:00:20.456Z"
+    "agentReport": "Portföy henüz yeni oluşturuldu ve toplam 550 USD değerindedir. Layer 1'de yüksek likidite bulunmakta, ancak pozisyon açmamak en iyi strateji olabilir.",
+    "lastUpdate": "2026-03-04T07:00:14.592Z"
   },
   "signals": []
 }
